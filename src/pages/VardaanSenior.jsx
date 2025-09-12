@@ -7,12 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import CircularTeacherSlider from '../components/CircularTeacherSlider';
-
-
 import supabase from '../supabaseClient';
 import SeniorCiruculum from '../components/SeniorCiruculum';
-import SeniorTeacherSlider from '../components/seniorteacherslider';
+import CircularTeacherSlider from '../components/seniorteacherslider';
 import JuniorMentorSlider from '../components/JuniorMentorSlider';
 import TeacherSlider from '../components/Teacherslider';
 
