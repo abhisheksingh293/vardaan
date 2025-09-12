@@ -1,0 +1,43 @@
+.students-love-section {
+  width: 100%;
+  background: linear-gradient(90deg, #fff7ed 60%, #ffecd2 100%);
+  padding: 44px 0 36px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.students-love-text {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ff4e3c;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 18px #fb923c33;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .students-love-text {
+    font-size: 1.5rem;
+    gap: 8px;
+    flex-direction: row;
+    padding: 0 8px;
+    line-height: 1.25;
+  }
+}
+
+.students-love-heart {
+  font-size: 2.8rem;
+  color: #fb923c;
+  margin: 0 12px;
+  animation: pulse-heart 1.2s infinite alternate;
+}
+@keyframes pulse-heart {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}

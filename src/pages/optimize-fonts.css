@@ -1,0 +1,15 @@
+/* Optimize Google Fonts loading */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Use font-display: swap for performance */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK5hF2w4.woff2') format('woff2');
+}
