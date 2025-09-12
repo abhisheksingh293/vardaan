@@ -319,7 +319,7 @@ function LogoutSyncHandler() {
     const params = new URLSearchParams(window.location.hash.replace('#', '?'));
     if (params.get('logout')) {
       window.location.hash = '';
-      navigate('/login');
+      navigate('/Login');
     }
   }, [navigate]);
   return null;
@@ -365,7 +365,7 @@ function App() {
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
-      if (session?.user && location.pathname === '/login') {
+      if (session?.user && location.pathname === '/Login') {
         navigate('/dashboard');
       }
     }, [navigate, location.pathname]);
@@ -392,7 +392,7 @@ function App() {
           <Route Path="/Map" element={<Map />} />
           <Route path="/" element={<LandingPage />} />
 <Route path="/hall-of-fame" element={<HallOfFame />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/testresults" element={<TestResults />} />
           <Route path="/top-results" element={<TopResults />} />
           <Route path="/resultcheck" element={<ResultCheck />} />
