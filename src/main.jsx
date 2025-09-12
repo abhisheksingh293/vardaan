@@ -1,40 +1,35 @@
-import { StrictMode } from 'react';
+import { StrictMode, Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
-import { useState, useEffect } from 'react';
 import './index.css';
 import AppWithRouter from './App';
 
 const isProduction = import.meta.env.PROD;
 
+// Create lazy-loaded components
+const Analytics = isProduction 
+  ? lazy(() => import('@vercel/analytics/react').then(module => ({ default: module.default })))
+  : () => null;
+
+const SpeedInsights = isProduction
+  ? lazy(() => import('@vercel/speed-insights/react').then(module => ({ default: module.default })))
+  : () => null;
+
 function App() {
-  const [AnalyticsComponent, setAnalyticsComponent] = useState(() => () => null);
-  const [SpeedInsightsComponent, setSpeedInsightsComponent] = useState(() => () => null);
-
-  useEffect(() => {
-    if (isProduction) {
-      Promise.all([
-        import('@vercel/analytics/react'),
-        import('@vercel/speed-insights/react')
-      ]).then(([analytics, speedInsights]) => {
-        setAnalyticsComponent(() => analytics.default);
-        setSpeedInsightsComponent(() => speedInsights.default);
-      });
-    }
-  }, []);
-
   return (
     <StrictMode>
       <AppWithRouter />
       {isProduction && (
-        <>
-          <AnalyticsComponent />
-          <SpeedInsightsComponent />
-        </>
+        <Suspense fallback={null}>
+          <Analytics />
+          <SpeedInsights />
+        </Suspense>
       )}
     </StrictMode>
   );
 }
 
 const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+}
