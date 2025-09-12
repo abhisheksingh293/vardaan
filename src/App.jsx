@@ -700,7 +700,13 @@ function App() {
 
 export default function AppWithRouter() {
   return (
-    <Router>
+    <Router
+      future={{
+        // Enable the new behavior for v7
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <App />
     </Router>
   );
