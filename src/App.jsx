@@ -1,3 +1,5 @@
+
+import { Analytics } from '@vercel/analytics/react';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useParams, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -710,3 +712,4 @@ function RedirectToCategory() {
   const { category } = useParams();
   return <Navigate to={`/studymaterial/${category}`} replace />;
 }
+<Analytics />
