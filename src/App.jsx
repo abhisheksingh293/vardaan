@@ -19,7 +19,7 @@ const TestPaper = React.lazy(() => import('./pages/TestPaper.jsx'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard.jsx'));
 import Admin from './pages/Admin.jsx';
 import Abhishek from './studymaterial/Abhishek.jsx';
-import Login from './pages/Login.jsx';
+import Login from './pages/login.jsx';
 import AuthCallback from './pages/AuthCallback.jsx';
 import BookSolutions from './pages/BookSolutions.jsx';
 import NcertBooks from './pages/NcertBooks.jsx';
