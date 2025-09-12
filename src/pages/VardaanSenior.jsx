@@ -15,7 +15,7 @@ import SeniorCiruculum from '../components/SeniorCiruculum';
 import SeniorTeacherSlider from '../components/seniorteacherslider';
 import JuniorMentorSlider from '../components/JuniorMentorSlider';
 import TeacherSlider from '../components/Teacherslider';
-import SeniorDesktopTeacher from '../components/seniordesktopteacher.jsx';
+import SeniorDesktopTeacher from '../components/SeniorDesktopTeacher.jsx';
 
 const class68Subjects = [
   'English',

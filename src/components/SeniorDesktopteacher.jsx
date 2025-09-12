@@ -32,7 +32,7 @@ const slides = [
   },
 ];
 
-export default function TeacherSlider() {
+export default function SeniorDesktopTeacher() {
   return (
     <section className="slider-wrapper w-[95%] mx-auto p-4 ">
       <div className="card__container">
