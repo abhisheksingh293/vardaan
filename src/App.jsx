@@ -19,7 +19,7 @@ const TestPaper = React.lazy(() => import('./pages/TestPaper.jsx'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard.jsx'));
 import Admin from './pages/Admin.jsx';
 import Abhishek from './studymaterial/Abhishek.jsx';
-import Login from './pages/login.jsx';
+import Login from './pages/Login.jsx';
 import AuthCallback from './pages/AuthCallback.jsx';
 import BookSolutions from './pages/BookSolutions.jsx';
 import NcertBooks from './pages/NcertBooks.jsx';
@@ -392,7 +392,6 @@ function App() {
           <Route Path="/Map" element={<Map />} />
           <Route path="/" element={<LandingPage />} />
 <Route path="/hall-of-fame" element={<HallOfFame />} />
-          <Route path="/Login" element={<Login />} />
           <Route path="/testresults" element={<TestResults />} />
           <Route path="/top-results" element={<TopResults />} />
           <Route path="/resultcheck" element={<ResultCheck />} />
