@@ -9,11 +9,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import CircularTeacherSlider from '../components/CircularTeacherSlider';
 
+
 import supabase from '../supabaseClient';
 import SeniorCiruculum from '../components/SeniorCiruculum';
 import SeniorTeacherSlider from '../components/seniorteacherslider';
 import JuniorMentorSlider from '../components/JuniorMentorSlider';
-import TeacherSlider from '../components/TeacherSlider';
+import TeacherSlider from '../components/Teacherslider';
 import SeniorDesktopTeacher from '../components/SeniorDesktopTeacher';
 
 const class68Subjects = [
