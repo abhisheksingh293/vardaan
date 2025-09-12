@@ -602,7 +602,7 @@ function App() {
           <Route path="/book-solutions" element={<BookSolutions />} />
           <Route path="/ncertbooks" element={<NcertBooks />} />
           <Route path="/syllabus" element={<Syllabus />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<RegisterStudent />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
