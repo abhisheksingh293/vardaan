@@ -304,6 +304,9 @@ import HallOfFame from './components/HallOfFame.jsx';
 
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes.jsx';
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes.jsx';
+import Class10cbseextraResource from './studymaterial/Class10cbseextraResource.jsx';
+import Class10cbsesstpracticepaper1 from './studymaterial/Class10cbsesstpracticepaper1.jsx';
+import Class10cbsesstpracticepaper2 from './studymaterial/Class10cbsesstpracticepaper2.jsx';
 
 
 function ScrollToTop() {
@@ -414,7 +417,8 @@ function App() {
           <Route path="/studymaterial/class8/Class8Mathematics" element={<Class8Mathematics />} />
           <Route path="/studymaterial/class8/Class8SocialScience" element={<Class8SocialScience />} />
 
-          <Route path="/studymaterial/class10/extraresources" element={<SstImportQuestionHalfYearly />} />
+          <Route path="/studymaterial/class10/extraresources" element={<Class10cbseextraResource />} />
+          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1" element={<Class10cbsesstpracticepaper1 />} />
 
 
 
@@ -692,6 +696,13 @@ function App() {
 <Route path="/studymaterial/class7/Class7CbseSstUnpackingGenderClassNotes" element={<Class7CbseSstUnpackingGenderClassNotes />} />
 <Route path="/studymaterial/class7/Class7CbseSstWaterSurroundingTheEarthDetailedNotes" element={<Class7CbseSstWaterSurroundingTheEarthDetailedNotes />} />
 <Route path="/studymaterial/class7/Class7CbseSstWaterSurroundingTheEarthClassNotes" element={<Class7CbseSstWaterSurroundingTheEarthClassNotes />} />
+<Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1' element={<Class10cbsesstpracticepaper1 />} />  
+<Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2' element={<Class10cbsesstpracticepaper2 />} />
+       
+       
+       
+       
+       
         </Routes> 
         <ToastContainer />
     </div>
