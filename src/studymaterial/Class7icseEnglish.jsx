@@ -1,13 +1,12 @@
-import React from 'react';
+import React from 'react'
+import UpcomingNotes from '../components/UpcomingNotes'
 
-const Class7icseEnglish = () => (
-  <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-50 to-purple-100 p-6">
-    <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-2xl w-full text-center">
-      <h1 className="text-3xl sm:text-5xl font-extrabold text-purple-600 mb-6">Class 7 ICSE English</h1>
-      <p className="text-lg text-gray-700 mb-4">Welcome to Class 7 ICSE English!<br/>Study material and resources will appear here soon.</p>
-      <img src="/SubjectLogo/English Language.png" alt="English Icon" className="mx-auto w-40 h-40 rounded-lg shadow-md" />
+function Class7icseEnglish() {
+  return (
+    <div>
+      <UpcomingNotes />
     </div>
-  </div>
-);
+  )
+}
 
-export default Class7icseEnglish;
+export default Class7icseEnglish

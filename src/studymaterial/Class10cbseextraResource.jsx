@@ -24,42 +24,42 @@ const Class10cbseextraResource = () => {
       iconBg: 'bg-purple-100',
       iconColor: 'text-purple-600'
     },
-    {
-      name: "Practice Questions",
-      path: "/studymaterial/class10/extraresources/practice-questions",
-      description: "Half Yearly 2025",
-      icon: "📝",
-      bgGradient: 'from-green-500 to-green-600',
-      iconBg: 'bg-green-100',
-      iconColor: 'text-green-600'
-    },
-    {
-      name: "Revision Notes",
-      path: "/studymaterial/class10/extraresources/revision-notes",
-      description: "Half Yearly 2025",
-      icon: "📝",
-      bgGradient: 'from-yellow-500 to-yellow-600',
-      iconBg: 'bg-yellow-100',
-      iconColor: 'text-yellow-600'
-    },
-    {
-      name: "Important Questions",
-      path: "/studymaterial/class10/extraresources/important-questions",
-      description: "Half Yearly 2025",
-      icon: "📝",
-      bgGradient: 'from-red-500 to-red-600',
-      iconBg: 'bg-red-100',
-      iconColor: 'text-red-600'
-    },
-    {
-      name: "Practice Questions",
-      path: "/studymaterial/class10/extraresources/practice-questions",
-      description: "Half Yearly 2025",
-      icon: "📝",
-      bgGradient: 'from-indigo-500 to-indigo-600',
-      iconBg: 'bg-indigo-100',
-      iconColor: 'text-indigo-600'
-    }
+    // {
+    //   name: "Practice Questions",
+    //   path: "/studymaterial/class10/extraresources/practice-questions",
+    //   description: "Half Yearly 2025",
+    //   icon: "📝",
+    //   bgGradient: 'from-green-500 to-green-600',
+    //   iconBg: 'bg-green-100',
+    //   iconColor: 'text-green-600'
+    // },
+    // {
+    //   name: "Revision Notes",
+    //   path: "/studymaterial/class10/extraresources/revision-notes",
+    //   description: "Half Yearly 2025",
+    //   icon: "📝",
+    //   bgGradient: 'from-yellow-500 to-yellow-600',
+    //   iconBg: 'bg-yellow-100',
+    //   iconColor: 'text-yellow-600'
+    // },
+    // {
+    //   name: "Important Questions",
+    //   path: "/studymaterial/class10/extraresources/important-questions",
+    //   description: "Half Yearly 2025",
+    //   icon: "📝",
+    //   bgGradient: 'from-red-500 to-red-600',
+    //   iconBg: 'bg-red-100',
+    //   iconColor: 'text-red-600'
+    // },
+    // {
+    //   name: "Practice Questions",
+    //   path: "/studymaterial/class10/extraresources/practice-questions",
+    //   description: "Half Yearly 2025",
+    //   icon: "📝",
+    //   bgGradient: 'from-indigo-500 to-indigo-600',
+    //   iconBg: 'bg-indigo-100',
+    //   iconColor: 'text-indigo-600'
+    // }
   ];
 
   
@@ -73,7 +73,7 @@ const Class10cbseextraResource = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4 sm:p-6 font-inter">
+    <div className="min-h-screen bg-[#FFF7ED] p-4 sm:p-6 font-inter">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
