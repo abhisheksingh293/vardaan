@@ -445,7 +445,7 @@ import Class10cbsesstpracticepaper1 from './studymaterial/Class10cbsesstpractice
 import Class10cbsesstpracticepaper2 from './studymaterial/Class10cbsesstpracticepaper2.jsx';
 
 import UpcomingNotes from './components/UpcomingNotes';
-
+import Class10sstHalfyearly2025ImportantQuestions from './studymaterial/Class10sstHalfyearly2025ImportantQuestions.jsx';
 
 
 
@@ -549,9 +549,17 @@ function App() {
           <Route path="/admindashboard" element={<AdminDashboard />} />
           <Route path="/studymaterial" element={<StudyMaterial />} />
           <Route path="/studymaterial/class10" element={<Class10 />} />
+          <Route path="/studymaterial/class10/Class10Science" element={<Class10Science />} />
+          <Route path="/studymaterial/class10/Class10Mathematics" element={<Class10Mathematics />} />
+          <Route path="/studymaterial/class10/Class10English" element={<Class10English />} />
+          <Route path="/studymaterial/class10/Class10EnglishGrammar" element={<Class10EnglishGrammar />} />
+          <Route path="/studymaterial/class10/Class10SocialScience" element={<Class10SocialScience />} />
+          <Route path="/studymaterial/class10/Class10History" element={<Class10SocialScience />} />
           <Route path="/studymaterial/:class10science/:class10Science" element={<Class10Science />} />
           <Route path="/studymaterial/:class10/:class10science/:class10SciencecbsePYQ" element={<Class10ScienceCbsePYQ />} />
           <Route path="/class10science" element={<Class10Science />} />
+          <Route path="/studymaterial/class6" element={<Class6 />} />
+          <Route path="/studymaterial/class6icse" element={<Class6icse />} />
           <Route path="/studymaterial/class8" element={<Class8 />} />
           <Route path="/studymaterial/class8" element={<Class8 />} />
           <Route path="/studymaterial/class8/Class8Science" element={<Class8Science />} />
@@ -560,7 +568,8 @@ function App() {
 
           <Route path="/studymaterial/class10/extraresources" element={<Class10cbseextraResource />} />
           <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1" element={<Class10cbsesstpracticepaper1 />} />
-
+          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2" element={<Class10cbsesstpracticepaper2 />} />
+          <Route path="/studymaterial/class10/extraresources/Class10sstHalfyearly2025ImportantQuestions" element={<Class10sstHalfyearly2025ImportantQuestions />} />
 
 
 

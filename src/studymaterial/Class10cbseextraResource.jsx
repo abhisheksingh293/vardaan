@@ -24,6 +24,15 @@ const Class10cbseextraResource = () => {
       iconBg: 'bg-purple-100',
       iconColor: 'text-purple-600'
     },
+    {
+      name: "SST Important Questions",
+      path: "/studymaterial/class10/extraresources/Class10sstHalfyearly2025ImportantQuestions",
+      description: "Half Yearly 2025 Important Questions",
+      icon: "📝",
+      bgGradient: 'from-green-500 to-green-600',
+      iconBg: 'bg-green-100',
+      iconColor: 'text-green-600'
+    },
     // {
     //   name: "Practice Questions",
     //   path: "/studymaterial/class10/extraresources/practice-questions",
