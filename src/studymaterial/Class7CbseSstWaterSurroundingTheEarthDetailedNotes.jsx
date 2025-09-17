@@ -1,10 +1,10 @@
 import React from 'react';
+import UpcomingNotes from '../components/UpcomingNotes';
 
 function Class7CbseSstWaterSurroundingTheEarthDetailedNotes() {
   return (
     <div>
-      <h1>Water Surrounding the Earth - Detailed Notes</h1>
-      <p>Content coming soon...</p>
+      <UpcomingNotes />
     </div>
   );
 }

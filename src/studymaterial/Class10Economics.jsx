@@ -10,11 +10,11 @@ const Class10Economics = () => {
   // --- Explicit handlers for every button of every chapter ---
   // Chapter 01: DEVELOPMENT
   const goToNcertPdf01 = () => { window.location.href = `https://ncert.nic.in/textbook/pdf/jess201.pdf`; };
-  const goToNcertSolution01 = () => { window.location.href = ``; };
+  const goToNcertSolution01 = () => { window.location.href = `/`; };
   const goToPreviousYearQuestions01 = () => { window.location.href = ``; };
   const goToChapterNotes01 = () => { window.location.href = `/studymaterial/class10/Class10Economics/Class10EconomicsDevelopment`; };
   const goToClassNotes01 = () => { window.location.href = `/studymaterial/class10/Class10Economics/Class10EconomicsDevelopmentClassNotes`; };
-  const goToMindMap01 = () => { window.location.href = ``; };
+  const goToMindMap01 = () => { window.location.href = `/`; };
 
 
   // Chapter 02: SECTORS OF THE INDIAN ECONOMY

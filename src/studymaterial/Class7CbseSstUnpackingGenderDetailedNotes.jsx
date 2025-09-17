@@ -1,10 +1,10 @@
 import React from 'react';
+import UpcomingNotes from '../components/UpcomingNotes';
 
 function Class7CbseSstUnpackingGenderDetailedNotes() {
   return (
     <div>
-      <h1>Unpacking Gender - Detailed Notes</h1>
-      <p>Content coming soon...</p>
+      <UpcomingNotes />
     </div>
   );
 }

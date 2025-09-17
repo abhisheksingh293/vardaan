@@ -1,7 +1,62 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useParams, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes.jsx';
+import Class9CivicsWhatIsDemocracyWhyDemocracyChapterNotes from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyChapterNotes.jsx';
+import Class9CivicsWhatIsDemocracyWhyDemocracyMindMaps from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyMindMaps.jsx';
+import Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions.jsx';
+import Class9Civics from './studymaterial/Class9Civics.jsx';
+import Class9History from './studymaterial/Class9History.jsx';
+import Class9HistoryTheFrenchRevolutionClassNotes from './studymaterial/Class9HistoryTheFrenchRevolutionClassNotes.jsx';
+import Class9HistoryTheFrenchRevolutionChapterNotes from './studymaterial/Class9HistoryTheFrenchRevolutionChapterNotes.jsx';
+import Class9HistoryTheFrenchRevolutionMindMaps from './studymaterial/Class9HistoryTheFrenchRevolutionMindMaps.jsx';
+import Class9HistoryTheFrenchRevolutionPracticeQuestions from './studymaterial/Class9HistoryTheFrenchRevolutionPracticeQuestions.jsx';
+import Class9HistorySocialisminEuropeandtheRussianRevolutionClassNotes from './studymaterial/Class9HistorySocialisminEuropeandtheRussianRevolutionClassNotes.jsx';
+import Class9HistorySocialisminEuropeandtheRussianRevolutionChapterNotes from './studymaterial/Class9HistorySocialisminEuropeandtheRussianRevolutionChapterNotes.jsx';
+import Class9HistorySocialisminEuropeandtheRussianRevolutionMindMaps from './studymaterial/Class9HistorySocialisminEuropeandtheRussianRevolutionMindMaps.jsx';
+import Class9HistorySocialisminEuropeandtheRussianRevolutionPracticeQuestions from './studymaterial/Class9HistorySocialisminEuropeandtheRussianRevolutionPracticeQuestions.jsx';
+import Class9HistoryNazismandtheRiseofHitlerClassNotes from './studymaterial/Class9HistoryNazismandtheRiseofHitlerClassNotes.jsx';
+import Class9HistoryNazismandtheRiseofHitlerChapterNotes from './studymaterial/Class9HistoryNazismandtheRiseofHitlerChapterNotes.jsx';
+import Class9HistoryNazismandtheRiseofHitlerMindMaps from './studymaterial/Class9HistoryNazismandtheRiseofHitlerMindMaps.jsx';
+import Class9HistoryNazismandtheRiseofHitlerPracticeQuestions from './studymaterial/Class9HistoryNazismandtheRiseofHitlerPracticeQuestions.jsx';
+import Class9HistoryForestSocietyandColonialismClassNotes from './studymaterial/Class9HistoryForestSocietyandColonialismClassNotes.jsx';
+import Class9HistoryForestSocietyandColonialismChapterNotes from './studymaterial/Class9HistoryForestSocietyandColonialismChapterNotes.jsx';
+import Class9HistoryForestSocietyandColonialismMindMaps from './studymaterial/Class9HistoryForestSocietyandColonialismMindMaps.jsx';
+import Class9HistoryForestSocietyandColonialismPracticeQuestions from './studymaterial/Class9HistoryForestSocietyandColonialismPracticeQuestions.jsx';
+import Class9HistoryPastoralistsintheModernWorldClassNotes from './studymaterial/Class9HistoryPastoralistsintheModernWorldClassNotes.jsx';
+import Class9HistoryPastoralistsintheModernWorldChapterNotes from './studymaterial/Class9HistoryPastoralistsintheModernWorldChapterNotes.jsx';
+import Class9HistoryPastoralistsintheModernWorldMindMaps from './studymaterial/Class9HistoryPastoralistsintheModernWorldMindMaps.jsx';
+import Class9HistoryPastoralistsintheModernWorldPracticeQuestions from './studymaterial/Class9HistoryPastoralistsintheModernWorldPracticeQuestions.jsx';
+import Class9Economics from './studymaterial/Class9Economics.jsx';
+import Class9CivicsTheConstitutionalDesignClassNotes from './studymaterial/Class9CivicsTheConstitutionalDesignClassNotes.jsx';
+import Class9CivicsTheConstitutionalDesignChapterNotes from './studymaterial/Class9CivicsTheConstitutionalDesignChapterNotes.jsx';
+import Class9CivicsTheConstitutionalDesignMindMaps from './studymaterial/Class9CivicsTheConstitutionalDesignMindMaps.jsx';
+import Class9CivicsTheConstitutionalDesignPracticeQuestions from './studymaterial/Class9CivicsTheConstitutionalDesignPracticeQuestions.jsx';
+import Class9CivicsWorkingofInstitutionsClassNotes from './studymaterial/Class9CivicsWorkingofInstitutionsClassNotes.jsx';
+import Class9CivicsWorkingofInstitutionsChapterNotes from './studymaterial/Class9CivicsWorkingofInstitutionsChapterNotes.jsx';
+import Class9CivicsWorkingofInstitutionsMindMaps from './studymaterial/Class9CivicsWorkingofInstitutionsMindMaps.jsx';
+import Class9CivicsWorkingofInstitutionsPracticeQuestions from './studymaterial/Class9CivicsWorkingofInstitutionsPracticeQuestions.jsx';
+import Class9CivicsDemocraticRightsClassNotes from './studymaterial/Class9CivicsDemocraticRightsClassNotes.jsx';
+import Class9CivicsDemocraticRightsChapterNotes from './studymaterial/Class9CivicsDemocraticRightsChapterNotes.jsx';
+import Class9CivicsDemocraticRightsMindMaps from './studymaterial/Class9CivicsDemocraticRightsMindMaps.jsx';
+import Class9CivicsDemocraticRightsPracticeQuestions from './studymaterial/Class9CivicsDemocraticRightsPracticeQuestions.jsx';
+import Class9EconomicsTheStoryOfVillagePalampurClassNotes from './studymaterial/Class9EconomicsTheStoryOfVillagePalampurClassNotes.jsx';
+import Class9EconomicsTheStoryOfVillagePalampurChapterNotes from './studymaterial/Class9EconomicsTheStoryOfVillagePalampurChapterNotes.jsx';
+import Class9EconomicsTheStoryOfVillagePalampurMindMaps from './studymaterial/Class9EconomicsTheStoryOfVillagePalampurMindMaps.jsx';
+import Class9EconomicsTheStoryOfVillagePalampurPracticeQuestions from './studymaterial/Class9EconomicsTheStoryOfVillagePalampurPracticeQuestions.jsx';
+import Class9EconomicsPeopleAsResourcesClassNotes from './studymaterial/Class9EconomicsPeopleAsResourcesClassNotes.jsx';
+import Class9EconomicsPeopleAsResourcesChapterNotes from './studymaterial/Class9EconomicsPeopleAsResourcesChapterNotes.jsx';
+import Class9EconomicsPeopleAsResourcesMindMaps from './studymaterial/Class9EconomicsPeopleAsResourcesMindMaps.jsx';
+import Class9EconomicsPeopleAsResourcesPracticeQuestions from './studymaterial/Class9EconomicsPeopleAsResourcesPracticeQuestions.jsx';
+import Class9EconomicsPovertyAsAChallengeClassNotes from './studymaterial/Class9EconomicsPovertyAsAChallengeClassNotes.jsx';
+import Class9EconomicsPovertyAsAChallengeChapterNotes from './studymaterial/Class9EconomicsPovertyAsAChallengeChapterNotes.jsx';
+import Class9EconomicsPovertyAsAChallengeMindMaps from './studymaterial/Class9EconomicsPovertyAsAChallengeMindMaps.jsx';
+import Class9EconomicsPovertyAsAChallengePracticeQuestions from './studymaterial/Class9EconomicsPovertyAsAChallengePracticeQuestions.jsx';
+import Class9EconomicsFoodSecurityInIndiaClassNotes from './studymaterial/Class9EconomicsFoodSecurityInIndiaClassNotes.jsx';
+import Class9EconomicsFoodSecurityInIndiaChapterNotes from './studymaterial/Class9EconomicsFoodSecurityInIndiaChapterNotes.jsx';
+import Class9EconomicsFoodSecurityInIndiaMindMaps from './studymaterial/Class9EconomicsFoodSecurityInIndiaMindMaps.jsx';
+import Class9EconomicsFoodSecurityInIndiaPracticeQuestions from './studymaterial/Class9EconomicsFoodSecurityInIndiaPracticeQuestions.jsx';
+
 import TopResults from './components/TopResults';
 import ResultCheck from './pages/ResultCheck.jsx';
 import RegisterStudent from './pages/RegisterStudent.jsx';
@@ -52,6 +107,7 @@ import Class7CbseSstHumanEnvironmentSettlementTransportAndCommunicationClassNote
 import Class7CbseSstLifeOnTheEarthDetailedNotes from './studymaterial/Class7CbseSstLifeOnTheEarthDetailedNotes.jsx';
 import Class7CbseSstMajorReligionsClassNotes from "./studymaterial/Class7CbseSstMajorReligionsClassNotes.jsx";
 import Class7CbseSstComponentsOfEnvironmentDetailedNotes from './studymaterial/Class7CbseSstComponentsOfEnvironmentDetailedNotes.jsx';
+import Class7icseGeographyAustraliaChapterNotes from './studymaterial/Class7icseGeographyAustraliaChapterNotes.jsx';
 import Class7CbseSstComponentsOfEnvironmentClassNotes from './studymaterial/Class7CbseSstComponentsOfEnvironmentClassNotes.jsx';
 import Class7CbseSstMajorReligionsDetailedNotes from './studymaterial/Class7CbseSstMajorReligionsDetailedNotes.jsx';
 import Class7CbseSstLandAndThePeopleDetailedNotes from './studymaterial/Class7CbseSstLandAndThePeopleDetailedNotes.jsx';
@@ -169,10 +225,90 @@ import Class7icse from './studymaterial/Class7icse.jsx';
 import Class8icse from './studymaterial/Class8icse.jsx';
 import Class7icseScience from './studymaterial/Class7icseScience.jsx';
 import Class7icseMathematics from './studymaterial/Class7icseMathematics.jsx';
-import Class7icseSocialScience from './studymaterial/Class7icseSocialScience.jsx';
+import Class7icseGeography from './studymaterial/Class7icseGeography.jsx';
+import Class7icseGeographyTheOceanClassNotes from './studymaterial/Class7icseGeographyTheOceanClassNotes.jsx';
+import Class7icseGeographyTheOceanChapterNotes from './studymaterial/Class7icseGeographyTheOceanChapterNotes.jsx';
+import Class7icseGeographyTheOceanMindMaps from './studymaterial/Class7icseGeographyTheOceanMindMaps.jsx';
+import Class7icseGeographyTheOceanPracticeQuestions from './studymaterial/Class7icseGeographyTheOceanPracticeQuestions.jsx';
+import Class7icseGeographyWeatherandClimatePracticeQuestions from './studymaterial/Class7icseGeographyWeatherandClimatePracticeQuestions.jsx';
+import Class7icseGeographyWeatherandClimateMindMaps from './studymaterial/Class7icseGeographyWeatherandClimateMindMaps.jsx';
+import Class7icseGeographyWeatherandClimateClassNotes from './studymaterial/Class7icseGeographyWeatherandClimateClassNotes.jsx';
+import Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes from './studymaterial/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes.jsx';
+import Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsChapterNotes from './studymaterial/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsChapterNotes.jsx';
+import Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsMindMaps from './studymaterial/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsMindMaps.jsx';
+import Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsPracticeQuestions from './studymaterial/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsPracticeQuestions.jsx';
+import Class7icseGeographyTheAtmosphereClassNotes from './studymaterial/Class7icseGeographyTheAtmosphereClassNotes.jsx';
+import Class7icseGeographyTheAtmosphereChapterNotes from './studymaterial/Class7icseGeographyTheAtmosphereChapterNotes.jsx';
+import Class7icseGeographyTheAtmosphereMindMaps from './studymaterial/Class7icseGeographyTheAtmosphereMindMaps.jsx';
+import Class7icseGeographyTheAtmospherePracticeQuestions from './studymaterial/Class7icseGeographyTheAtmospherePracticeQuestions.jsx';
+import Class7icseGeographyWeatherandClimateChapterNotes from './studymaterial/Class7icseGeographyWeatherandClimateChapterNotes.jsx';
 import Class7icseEnglish from './studymaterial/Class7icseEnglish.jsx';
 import Class7icseEnglishGrammar from './studymaterial/Class7icseEnglishGrammar.jsx';
 import Class7icseCivicsHistory from './studymaterial/Class7icseCivicsHistory.jsx';
+import Class7icseCivicsHistoryTheAdventofChristianityClassNotes from './studymaterial/Class7icseCivicsHistoryTheAdventofChristianityClassNotes.jsx';
+import Class7icseCivicsHistoryTheAdventofChristianityChapterNotes from './studymaterial/Class7icseCivicsHistoryTheAdventofChristianityChapterNotes.jsx';
+import Class7icseCivicsHistoryTheAdventofChristianityMindMaps from './studymaterial/Class7icseCivicsHistoryTheAdventofChristianityMindMaps.jsx';
+import Class7icseCivicsHistoryTheAdventofChristianityPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheAdventofChristianityPracticeQuestions.jsx';
+import Class7icseCivicsHistoryTheEmergenceofIslamClassNotes from './studymaterial/Class7icseCivicsHistoryTheEmergenceofIslamClassNotes.jsx';
+import Class7icseCivicsHistoryTheEmergenceofIslamChapterNotes from './studymaterial/Class7icseCivicsHistoryTheEmergenceofIslamChapterNotes.jsx';
+import Class7icseCivicsHistoryTheEmergenceofIslamMindMaps from './studymaterial/Class7icseCivicsHistoryTheEmergenceofIslamMindMaps.jsx';
+import Class7icseCivicsHistoryTheEmergenceofIslamPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheEmergenceofIslamPracticeQuestions.jsx';
+import Class7icseCivicsHistoryTheTurkishInvasionsClassNotes from './studymaterial/Class7icseCivicsHistoryTheTurkishInvasionsClassNotes.jsx';
+import Class7icseCivicsHistoryTheTurkishInvasionsChapterNotes from './studymaterial/Class7icseCivicsHistoryTheTurkishInvasionsChapterNotes.jsx';
+import Class7icseCivicsHistoryTheTurkishInvasionsMindMaps from './studymaterial/Class7icseCivicsHistoryTheTurkishInvasionsMindMaps.jsx';
+import Class7icseCivicsHistoryTheTurkishInvasionsPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheTurkishInvasionsPracticeQuestions.jsx';
+import Class7icseCivicsHistoryTheSlaveDynastyClassNotes from './studymaterial/Class7icseCivicsHistoryTheSlaveDynastyClassNotes.jsx';
+import Class7icseCivicsHistoryTheSlaveDynastyChapterNotes from './studymaterial/Class7icseCivicsHistoryTheSlaveDynastyChapterNotes.jsx';
+import Class7icseCivicsHistoryTheSlaveDynastyMindMaps from './studymaterial/Class7icseCivicsHistoryTheSlaveDynastyMindMaps.jsx';
+import Class7icseCivicsHistoryTheSlaveDynastyPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheSlaveDynastyPracticeQuestions.jsx';
+import Class7icseCivicsHistoryTheKhaljiDynastyClassNotes from './studymaterial/Class7icseCivicsHistoryTheKhaljiDynastyClassNotes.jsx';
+import Class7icseCivicsHistoryTheKhaljiDynastyChapterNotes from './studymaterial/Class7icseCivicsHistoryTheKhaljiDynastyChapterNotes.jsx';
+import Class7icseCivicsHistoryTheKhaljiDynastyMindMaps from './studymaterial/Class7icseCivicsHistoryTheKhaljiDynastyMindMaps.jsx';
+import Class7icseCivicsHistoryTheKhaljiDynastyPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheKhaljiDynastyPracticeQuestions.jsx';
+import Class7icseCivicsHistoryTheTughluqandLodiDynastiesClassNotes from './studymaterial/Class7icseCivicsHistoryTheTughluqandLodiDynastiesClassNotes.jsx';
+import Class7icseCivicsHistoryTheTughluqandLodiDynastiesChapterNotes from './studymaterial/Class7icseCivicsHistoryTheTughluqandLodiDynastiesChapterNotes.jsx';
+import Class7icseCivicsHistoryTheTughluqandLodiDynastiesMindMaps from './studymaterial/Class7icseCivicsHistoryTheTughluqandLodiDynastiesMindMaps.jsx';
+import Class7icseCivicsHistoryTheTughluqandLodiDynastiesPracticeQuestions from './studymaterial/Class7icseCivicsHistoryTheTughluqandLodiDynastiesPracticeQuestions.jsx';
+import Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsClassNotes from './studymaterial/Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsClassNotes.jsx';
+import Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsChapterNotes from './studymaterial/Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsChapterNotes.jsx';
+import Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsMindMaps from './studymaterial/Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsMindMaps.jsx';
+import Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsPracticeQuestions from './studymaterial/Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsPracticeQuestions.jsx';
+import Class7icseCivicsHistoryAdventoftheMughalsClassNotes from './studymaterial/Class7icseCivicsHistoryAdventoftheMughalsClassNotes.jsx';
+import Class7icseCivicsHistoryAdventoftheMughalsChapterNotes from './studymaterial/Class7icseCivicsHistoryAdventoftheMughalsChapterNotes.jsx';
+import Class7icseCivicsHistoryAdventoftheMughalsMindMaps from './studymaterial/Class7icseCivicsHistoryAdventoftheMughalsMindMaps.jsx';
+import Class7icseCivicsHistoryAdventoftheMughalsPracticeQuestions from './studymaterial/Class7icseCivicsHistoryAdventoftheMughalsPracticeQuestions.jsx';
+import Class7icseCivicsHistoryBaburandHumayunClassNotes from './studymaterial/Class7icseCivicsHistoryBaburandHumayunClassNotes.jsx';
+import Class7icseCivicsHistoryBaburandHumayunChapterNotes from './studymaterial/Class7icseCivicsHistoryBaburandHumayunChapterNotes.jsx';
+import Class7icseCivicsHistoryBaburandHumayunMindMaps from './studymaterial/Class7icseCivicsHistoryBaburandHumayunMindMaps.jsx';
+import Class7icseCivicsHistoryBaburandHumayunPracticeQuestions from './studymaterial/Class7icseCivicsHistoryBaburandHumayunPracticeQuestions.jsx';
+import Class7icseCivicsHistoryAkbarClassNotes from './studymaterial/Class7icseCivicsHistoryAkbarClassNotes.jsx';
+import Class7icseCivicsHistoryAkbarChapterNotes from './studymaterial/Class7icseCivicsHistoryAkbarChapterNotes.jsx';
+import Class7icseCivicsHistoryAkbarMindMaps from './studymaterial/Class7icseCivicsHistoryAkbarMindMaps.jsx';
+import Class7icseCivicsHistoryAkbarPracticeQuestions from './studymaterial/Class7icseCivicsHistoryAkbarPracticeQuestions.jsx';
+import Class7icseCivicsHistoryJahangirandShahJahanClassNotes from './studymaterial/Class7icseCivicsHistoryJahangirandShahJahanClassNotes.jsx';
+import Class7icseCivicsHistoryJahangirandShahJahanChapterNotes from './studymaterial/Class7icseCivicsHistoryJahangirandShahJahanChapterNotes.jsx';
+import Class7icseCivicsHistoryJahangirandShahJahanMindMaps from './studymaterial/Class7icseCivicsHistoryJahangirandShahJahanMindMaps.jsx';
+import Class7icseCivicsHistoryJahangirandShahJahanPracticeQuestions from './studymaterial/Class7icseCivicsHistoryJahangirandShahJahanPracticeQuestions.jsx';
+import Class7icseCivicsHistoryAurangzebandShivajiClassNotes from './studymaterial/Class7icseCivicsHistoryAurangzebandShivajiClassNotes.jsx';
+import Class7icseCivicsHistoryAurangzebandShivajiChapterNotes from './studymaterial/Class7icseCivicsHistoryAurangzebandShivajiChapterNotes.jsx';
+import Class7icseCivicsHistoryAurangzebandShivajiMindMaps from './studymaterial/Class7icseCivicsHistoryAurangzebandShivajiMindMaps.jsx';
+import Class7icseCivicsHistoryAurangzebandShivajiPracticeQuestions from './studymaterial/Class7icseCivicsHistoryAurangzebandShivajiPracticeQuestions.jsx';
+import Class7icseCivicsHistorySocialandCulturalChangesClassNotes from './studymaterial/Class7icseCivicsHistorySocialandCulturalChangesClassNotes.jsx';
+import Class7icseCivicsHistorySocialandCulturalChangesChapterNotes from './studymaterial/Class7icseCivicsHistorySocialandCulturalChangesChapterNotes.jsx';
+import Class7icseCivicsHistorySocialandCulturalChangesMindMaps from './studymaterial/Class7icseCivicsHistorySocialandCulturalChangesMindMaps.jsx';
+import Class7icseCivicsHistorySocialandCulturalChangesPracticeQuestions from './studymaterial/Class7icseCivicsHistorySocialandCulturalChangesPracticeQuestions.jsx';
+import Class7icseCivicsHistoryOurConstitutionClassNotes from './studymaterial/Class7icseCivicsHistoryOurConstitutionClassNotes.jsx';
+import Class7icseCivicsHistoryOurConstitutionChapterNotes from './studymaterial/Class7icseCivicsHistoryOurConstitutionChapterNotes.jsx';
+import Class7icseCivicsHistoryOurConstitutionMindMaps from './studymaterial/Class7icseCivicsHistoryOurConstitutionMindMaps.jsx';
+import Class7icseCivicsHistoryOurConstitutionPracticeQuestions from './studymaterial/Class7icseCivicsHistoryOurConstitutionPracticeQuestions.jsx';
+import Class7icseCivicsHistoryFundamentalRightsandDutiesClassNotes from './studymaterial/Class7icseCivicsHistoryFundamentalRightsandDutiesClassNotes.jsx';
+import Class7icseCivicsHistoryFundamentalRightsandDutiesChapterNotes from './studymaterial/Class7icseCivicsHistoryFundamentalRightsandDutiesChapterNotes.jsx';
+import Class7icseCivicsHistoryFundamentalRightsandDutiesMindMaps from './studymaterial/Class7icseCivicsHistoryFundamentalRightsandDutiesMindMaps.jsx';
+import Class7icseCivicsHistoryFundamentalRightsandDutiesPracticeQuestions from './studymaterial/Class7icseCivicsHistoryFundamentalRightsandDutiesPracticeQuestions.jsx';
+import Class7icseCivicsHistoryDirectivePrinciplesClassNotes from './studymaterial/Class7icseCivicsHistoryDirectivePrinciplesClassNotes.jsx';
+import Class7icseCivicsHistoryDirectivePrinciplesChapterNotes from './studymaterial/Class7icseCivicsHistoryDirectivePrinciplesChapterNotes.jsx';
+import Class7icseCivicsHistoryDirectivePrinciplesMindMaps from './studymaterial/Class7icseCivicsHistoryDirectivePrinciplesMindMaps.jsx';
+import Class7icseCivicsHistoryDirectivePrinciplesPracticeQuestions from './studymaterial/Class7icseCivicsHistoryDirectivePrinciplesPracticeQuestions.jsx';
 import Class8icseScience from './studymaterial/Class8icseScience.jsx';
 import Class10EconomicsSectorsOfTheIndianEconomy from './studymaterial/Class10EconomicsSectorsOfTheIndianEconomy.jsx';
 import SstImportQuestionHalfYearly from './studymaterial/SstImportQuestionHalfYearly.jsx';
@@ -304,14 +440,6 @@ import HallOfFame from './components/HallOfFame.jsx';
 
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes.jsx';
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes.jsx';
-import Class10cbseextraResource from './studymaterial/Class10cbseextraResource.jsx';
-import Class10cbsesstpracticepaper1 from './studymaterial/Class10cbsesstpracticepaper1.jsx';
-import Class10cbsesstpracticepaper2 from './studymaterial/Class10cbsesstpracticepaper2.jsx';
-
-import UpcomingNotes from './components/UpcomingNotes';
-
-
-
 
 
 function ScrollToTop() {
@@ -430,10 +558,7 @@ function App() {
           <Route path="/studymaterial/class8/Class8Mathematics" element={<Class8Mathematics />} />
           <Route path="/studymaterial/class8/Class8SocialScience" element={<Class8SocialScience />} />
 
-          <Route path="/studymaterial/class10/extraresources" element={<Class10cbseextraResource />} />
-          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1" element={<Class10cbsesstpracticepaper1 />} />
-          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2" element={<Class10cbsesstpracticepaper2 />} />
-          <Route path="/studymaterial/class10/extraresources/Class10sstHalfyearly2025ImportantQuestions" element={<Class10sstHalfyearly2025ImportantQuestions />} />
+          <Route path="/studymaterial/class10/extraresources" element={<SstImportQuestionHalfYearly />} />
 
 
 
@@ -506,17 +631,300 @@ function App() {
           <Route path="/studymaterial/class7icse" element={<Class7icse />} />
           <Route path="/studymaterial/class7icse/Class7icseScience" element={<Class7icseScience />} />
           <Route path="/studymaterial/class7icse/Class7icseMathematics" element={<Class7icseMathematics />} />
-          <Route path="/studymaterial/class7icse/Class7icseSocialScience" element={<Class7icseSocialScience />} />
+          <Route path="/studymaterial/class7icse/Class7icseGeography" element={<Class7icseGeography />} />
+          {/* CLASS7ICSEGEOGRAPHY CHAPTER ROUTES */}
+          {/* Chapter 01 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes" element={<Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsChapterNotes" element={<Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsMindMaps" element={<Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsPracticeQuestions" element={<Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsPracticeQuestions />} />
+          {/* Chapter 02 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheAtmosphereClassNotes" element={<Class7icseGeographyTheAtmosphereClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheAtmosphereChapterNotes" element={<Class7icseGeographyTheAtmosphereChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheAtmosphereMindMaps" element={<Class7icseGeographyTheAtmosphereMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheAtmospherePracticeQuestions" element={<Class7icseGeographyTheAtmospherePracticeQuestions />} />
+          {/* Chapter 03 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyWeatherandClimateClassNotes" element={<Class7icseGeographyWeatherandClimateClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyWeatherandClimateChapterNotes" element={<Class7icseGeographyWeatherandClimateChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyWeatherandClimateMindMaps" element={<Class7icseGeographyWeatherandClimateMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyWeatherandClimatePracticeQuestions" element={<Class7icseGeographyWeatherandClimatePracticeQuestions />} />
+          {/* Chapter 04 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+          {/* Chapter 05 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+          {/* Chapter 06 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+          {/* Chapter 08 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+          {/* Chapter 09 */}
+<Route path="/studymaterial/class7icse/geography/Class7icseGeographyAustraliaChapterNotes" element={<Class7icseGeographyAustraliaChapterNotes />} />
+
+{/* Class 9 Civics */}
+<Route path="/studymaterial/class9/Class9Civics" element={<Class9Civics />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes" element={<Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWhatIsDemocracyWhyDemocracyChapterNotes" element={<Class9CivicsWhatIsDemocracyWhyDemocracyChapterNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWhatIsDemocracyWhyDemocracyMindMaps" element={<Class9CivicsWhatIsDemocracyWhyDemocracyMindMaps />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions" element={<Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsTheConstitutionalDesignClassNotes" element={<Class9CivicsTheConstitutionalDesignClassNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsTheConstitutionalDesignChapterNotes" element={<Class9CivicsTheConstitutionalDesignChapterNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsTheConstitutionalDesignMindMaps" element={<Class9CivicsTheConstitutionalDesignMindMaps />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsTheConstitutionalDesignPracticeQuestions" element={<Class9CivicsTheConstitutionalDesignPracticeQuestions />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWorkingofInstitutionsClassNotes" element={<Class9CivicsWorkingofInstitutionsClassNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWorkingofInstitutionsChapterNotes" element={<Class9CivicsWorkingofInstitutionsChapterNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWorkingofInstitutionsMindMaps" element={<Class9CivicsWorkingofInstitutionsMindMaps />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsWorkingofInstitutionsPracticeQuestions" element={<Class9CivicsWorkingofInstitutionsPracticeQuestions />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsDemocraticRightsClassNotes" element={<Class9CivicsDemocraticRightsClassNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsDemocraticRightsChapterNotes" element={<Class9CivicsDemocraticRightsChapterNotes />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsDemocraticRightsMindMaps" element={<Class9CivicsDemocraticRightsMindMaps />} />
+<Route path="/studymaterial/class9/civics/Class9CivicsDemocraticRightsPracticeQuestions" element={<Class9CivicsDemocraticRightsPracticeQuestions />} />
+
+{/* Class 9 History */}
+<Route path="/studymaterial/class9/Class9History" element={<Class9History />} />
+<Route path="/studymaterial/class9/history/Class9HistoryTheFrenchRevolutionClassNotes" element={<Class9HistoryTheFrenchRevolutionClassNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryTheFrenchRevolutionChapterNotes" element={<Class9HistoryTheFrenchRevolutionChapterNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryTheFrenchRevolutionMindMaps" element={<Class9HistoryTheFrenchRevolutionMindMaps />} />
+<Route path="/studymaterial/class9/history/Class9HistoryTheFrenchRevolutionPracticeQuestions" element={<Class9HistoryTheFrenchRevolutionPracticeQuestions />} />
+
+<Route path="/studymaterial/class9/history/Class9HistorySocialisminEuropeandtheRussianRevolutionClassNotes" element={<Class9HistorySocialisminEuropeandtheRussianRevolutionClassNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistorySocialisminEuropeandtheRussianRevolutionChapterNotes" element={<Class9HistorySocialisminEuropeandtheRussianRevolutionChapterNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistorySocialisminEuropeandtheRussianRevolutionMindMaps" element={<Class9HistorySocialisminEuropeandtheRussianRevolutionMindMaps />} />
+<Route path="/studymaterial/class9/history/Class9HistorySocialisminEuropeandtheRussianRevolutionPracticeQuestions" element={<Class9HistorySocialisminEuropeandtheRussianRevolutionPracticeQuestions />} />
+
+<Route path="/studymaterial/class9/history/Class9HistoryNazismandtheRiseofHitlerClassNotes" element={<Class9HistoryNazismandtheRiseofHitlerClassNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryNazismandtheRiseofHitlerChapterNotes" element={<Class9HistoryNazismandtheRiseofHitlerChapterNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryNazismandtheRiseofHitlerMindMaps" element={<Class9HistoryNazismandtheRiseofHitlerMindMaps />} />
+<Route path="/studymaterial/class9/history/Class9HistoryNazismandtheRiseofHitlerPracticeQuestions" element={<Class9HistoryNazismandtheRiseofHitlerPracticeQuestions />} />
+
+<Route path="/studymaterial/class9/history/Class9HistoryForestSocietyandColonialismClassNotes" element={<Class9HistoryForestSocietyandColonialismClassNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryForestSocietyandColonialismChapterNotes" element={<Class9HistoryForestSocietyandColonialismChapterNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryForestSocietyandColonialismMindMaps" element={<Class9HistoryForestSocietyandColonialismMindMaps />} />
+<Route path="/studymaterial/class9/history/Class9HistoryForestSocietyandColonialismPracticeQuestions" element={<Class9HistoryForestSocietyandColonialismPracticeQuestions />} />
+
+<Route path="/studymaterial/class9/history/Class9HistoryPastoralistsintheModernWorldClassNotes" element={<Class9HistoryPastoralistsintheModernWorldClassNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryPastoralistsintheModernWorldChapterNotes" element={<Class9HistoryPastoralistsintheModernWorldChapterNotes />} />
+<Route path="/studymaterial/class9/history/Class9HistoryPastoralistsintheModernWorldMindMaps" element={<Class9HistoryPastoralistsintheModernWorldMindMaps />} />
+<Route path="/studymaterial/class9/history/Class9HistoryPastoralistsintheModernWorldPracticeQuestions" element={<Class9HistoryPastoralistsintheModernWorldPracticeQuestions />} />
+
+{/* Class 9 Economics */}
+<Route path="/studymaterial/class9/Class9Economics" element={<Class9Economics />} />
+<Route path="/studymaterial/Class9EconomicsTheStoryOfVillagePalampurClassNotes" element={<Class9EconomicsTheStoryOfVillagePalampurClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsTheStoryOfVillagePalampurClassNotes" element={<Class9EconomicsTheStoryOfVillagePalampurClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsTheStoryOfVillagePalampurChapterNotes" element={<Class9EconomicsTheStoryOfVillagePalampurChapterNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsTheStoryOfVillagePalampurMindMaps" element={<Class9EconomicsTheStoryOfVillagePalampurMindMaps />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsTheStoryOfVillagePalampurPracticeQuestions" element={<Class9EconomicsTheStoryOfVillagePalampurPracticeQuestions />} />
+<Route path="/studymaterial/class9EconomicsPeopleAsResourcesClassNotes" element={<Class9EconomicsPeopleAsResourcesClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPeopleAsResourcesClassNotes" element={<Class9EconomicsPeopleAsResourcesClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPeopleAsResourcesChapterNotes" element={<Class9EconomicsPeopleAsResourcesChapterNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPeopleAsResourcesMindMaps" element={<Class9EconomicsPeopleAsResourcesMindMaps />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPeopleAsResourcesPracticeQuestions" element={<Class9EconomicsPeopleAsResourcesPracticeQuestions />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPovertyAsAChallengeClassNotes" element={<Class9EconomicsPovertyAsAChallengeClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPovertyAsAChallengeChapterNotes" element={<Class9EconomicsPovertyAsAChallengeChapterNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPovertyAsAChallengeMindMaps" element={<Class9EconomicsPovertyAsAChallengeMindMaps />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsPovertyAsAChallengePracticeQuestions" element={<Class9EconomicsPovertyAsAChallengePracticeQuestions />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsFoodSecurityInIndiaClassNotes" element={<Class9EconomicsFoodSecurityInIndiaClassNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsFoodSecurityInIndiaChapterNotes" element={<Class9EconomicsFoodSecurityInIndiaChapterNotes />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsFoodSecurityInIndiaMindMaps" element={<Class9EconomicsFoodSecurityInIndiaMindMaps />} />
+<Route path="/studymaterial/class9/economics/Class9EconomicsFoodSecurityInIndiaPracticeQuestions" element={<Class9EconomicsFoodSecurityInIndiaPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/geography/Class7icseGeographyAustraliaClassNotes" element={<Class7icseGeographyAustraliaChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+          {/* Chapter 10 */}
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanClassNotes" element={<Class7icseGeographyTheOceanClassNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
+          <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
+         
+         
+         
+         
           <Route path="/studymaterial/class7icse/Class7icseEnglish" element={<Class7icseEnglish />} />
           <Route path="/studymaterial/class7icse/Class7icseEnglishGrammar" element={<Class7icseEnglishGrammar />} />
           <Route path="/studymaterial/class7icse/Class7icseCivicsHistory" element={<Class7icseCivicsHistory />} />
+
+{/* CLASS 7 ICSE CIVICS & HISTORY CHAPTER ROUTES */}
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityClassNotes" element={<Class7icseCivicsHistoryTheAdventofChristianityClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityChapterNotes" element={<Class7icseCivicsHistoryTheAdventofChristianityChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityMindMaps" element={<Class7icseCivicsHistoryTheAdventofChristianityMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityPracticeQuestions" element={<Class7icseCivicsHistoryTheAdventofChristianityPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislamClassNotes" element={<Class7icseCivicsHistoryTheEmergenceofIslamClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislam/chapternotes" element={<Class7icseCivicsHistoryTheEmergenceofIslamChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislam/mindmaps" element={<Class7icseCivicsHistoryTheEmergenceofIslamMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislam/practicequestions" element={<Class7icseCivicsHistoryTheEmergenceofIslamPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasions/classnotes" element={<Class7icseCivicsHistoryTheTurkishInvasionsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasions/chapternotes" element={<Class7icseCivicsHistoryTheTurkishInvasionsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasions/mindmaps" element={<Class7icseCivicsHistoryTheTurkishInvasionsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasions/practicequestions" element={<Class7icseCivicsHistoryTheTurkishInvasionsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynasty/classnotes" element={<Class7icseCivicsHistoryTheSlaveDynastyClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynasty/chapternotes" element={<Class7icseCivicsHistoryTheSlaveDynastyChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynasty/mindmaps" element={<Class7icseCivicsHistoryTheSlaveDynastyMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynasty/practicequestions" element={<Class7icseCivicsHistoryTheSlaveDynastyPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynasty/classnotes" element={<Class7icseCivicsHistoryTheKhaljiDynastyClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynasty/chapternotes" element={<Class7icseCivicsHistoryTheKhaljiDynastyChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynasty/mindmaps" element={<Class7icseCivicsHistoryTheKhaljiDynastyMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynasty/practicequestions" element={<Class7icseCivicsHistoryTheKhaljiDynastyPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynasties/classnotes" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynasties/chapternotes" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynasties/mindmaps" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynasties/practicequestions" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/vijayanagaraandbahmanikingdoms/classnotes" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/vijayanagaraandbahmanikingdoms/chapternotes" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/vijayanagaraandbahmanikingdoms/mindmaps" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/vijayanagaraandbahmanikingdoms/practicequestions" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughals/classnotes" element={<Class7icseCivicsHistoryAdventoftheMughalsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughals/chapternotes" element={<Class7icseCivicsHistoryAdventoftheMughalsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughals/mindmaps" element={<Class7icseCivicsHistoryAdventoftheMughalsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughals/practicequestions" element={<Class7icseCivicsHistoryAdventoftheMughalsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayun/classnotes" element={<Class7icseCivicsHistoryBaburandHumayunClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayun/chapternotes" element={<Class7icseCivicsHistoryBaburandHumayunChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayun/mindmaps" element={<Class7icseCivicsHistoryBaburandHumayunMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayun/practicequestions" element={<Class7icseCivicsHistoryBaburandHumayunPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/akbar/classnotes" element={<Class7icseCivicsHistoryAkbarClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbar/chapternotes" element={<Class7icseCivicsHistoryAkbarChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbar/mindmaps" element={<Class7icseCivicsHistoryAkbarMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbar/practicequestions" element={<Class7icseCivicsHistoryAkbarPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahan/classnotes" element={<Class7icseCivicsHistoryJahangirandShahJahanClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahan/chapternotes" element={<Class7icseCivicsHistoryJahangirandShahJahanChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahan/mindmaps" element={<Class7icseCivicsHistoryJahangirandShahJahanMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahan/practicequestions" element={<Class7icseCivicsHistoryJahangirandShahJahanPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivaji/classnotes" element={<Class7icseCivicsHistoryAurangzebandShivajiClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivaji/chapternotes" element={<Class7icseCivicsHistoryAurangzebandShivajiChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivaji/mindmaps" element={<Class7icseCivicsHistoryAurangzebandShivajiMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivaji/practicequestions" element={<Class7icseCivicsHistoryAurangzebandShivajiPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchanges/classnotes" element={<Class7icseCivicsHistorySocialandCulturalChangesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchanges/chapternotes" element={<Class7icseCivicsHistorySocialandCulturalChangesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchanges/mindmaps" element={<Class7icseCivicsHistorySocialandCulturalChangesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchanges/practicequestions" element={<Class7icseCivicsHistorySocialandCulturalChangesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitution/classnotes" element={<Class7icseCivicsHistoryOurConstitutionClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitution/chapternotes" element={<Class7icseCivicsHistoryOurConstitutionChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitution/mindmaps" element={<Class7icseCivicsHistoryOurConstitutionMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitution/practicequestions" element={<Class7icseCivicsHistoryOurConstitutionPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentalrightsandduties/classnotes" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentalrightsandduties/chapternotes" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentalrightsandduties/mindmaps" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentalrightsandduties/practicequestions" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicy/classnotes" element={<Class7icseCivicsHistoryDirectivePrinciplesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicy/chapternotes" element={<Class7icseCivicsHistoryDirectivePrinciplesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicy/mindmaps" element={<Class7icseCivicsHistoryDirectivePrinciplesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicy/practicequestions" element={<Class7icseCivicsHistoryDirectivePrinciplesPracticeQuestions />} />
+
+{/* ALTERNATE CIVICS & HISTORY ROUTES FOR /civicsandhistory/<chapter><Type> */}
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityClassNotes" element={<Class7icseCivicsHistoryTheAdventofChristianityClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityChapterNotes" element={<Class7icseCivicsHistoryTheAdventofChristianityChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityMindMaps" element={<Class7icseCivicsHistoryTheAdventofChristianityMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theadventofchristianityPracticeQuestions" element={<Class7icseCivicsHistoryTheAdventofChristianityPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislamClassNotes" element={<Class7icseCivicsHistoryTheEmergenceofIslamClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislamChapterNotes" element={<Class7icseCivicsHistoryTheEmergenceofIslamChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislamMindMaps" element={<Class7icseCivicsHistoryTheEmergenceofIslamMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theemergenceofislamPracticeQuestions" element={<Class7icseCivicsHistoryTheEmergenceofIslamPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasionsClassNotes" element={<Class7icseCivicsHistoryTheTurkishInvasionsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasionsChapterNotes" element={<Class7icseCivicsHistoryTheTurkishInvasionsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasionsMindMaps" element={<Class7icseCivicsHistoryTheTurkishInvasionsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theturkishinvasionsPracticeQuestions" element={<Class7icseCivicsHistoryTheTurkishInvasionsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynastyClassNotes" element={<Class7icseCivicsHistoryTheSlaveDynastyClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynastyChapterNotes" element={<Class7icseCivicsHistoryTheSlaveDynastyChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynastyMindMaps" element={<Class7icseCivicsHistoryTheSlaveDynastyMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/theslavedynastyPracticeQuestions" element={<Class7icseCivicsHistoryTheSlaveDynastyPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynastyClassNotes" element={<Class7icseCivicsHistoryTheKhaljiDynastyClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynastyChapterNotes" element={<Class7icseCivicsHistoryTheKhaljiDynastyChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynastyMindMaps" element={<Class7icseCivicsHistoryTheKhaljiDynastyMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thekhaljidynastyPracticeQuestions" element={<Class7icseCivicsHistoryTheKhaljiDynastyPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesClassNotes" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesChapterNotes" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesMindMaps" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesPracticeQuestions" element={<Class7icseCivicsHistoryTheTughluqandLodiDynastiesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsClassNotes" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsChapterNotes" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsMindMaps" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsPracticeQuestions" element={<Class7icseCivicsHistoryVijayanagaraandBahmaniKingdomsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughalsClassNotes" element={<Class7icseCivicsHistoryAdventoftheMughalsClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughalsChapterNotes" element={<Class7icseCivicsHistoryAdventoftheMughalsChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughalsMindMaps" element={<Class7icseCivicsHistoryAdventoftheMughalsMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/adventofthemughalsPracticeQuestions" element={<Class7icseCivicsHistoryAdventoftheMughalsPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayunClassNotes" element={<Class7icseCivicsHistoryBaburandHumayunClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayunChapterNotes" element={<Class7icseCivicsHistoryBaburandHumayunChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayunMindMaps" element={<Class7icseCivicsHistoryBaburandHumayunMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/baburandhumayunPracticeQuestions" element={<Class7icseCivicsHistoryBaburandHumayunPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/akbarClassNotes" element={<Class7icseCivicsHistoryAkbarClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbarChapterNotes" element={<Class7icseCivicsHistoryAkbarChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbarMindMaps" element={<Class7icseCivicsHistoryAkbarMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/akbarPracticeQuestions" element={<Class7icseCivicsHistoryAkbarPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanClassNotes" element={<Class7icseCivicsHistoryJahangirandShahJahanClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanChapterNotes" element={<Class7icseCivicsHistoryJahangirandShahJahanChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanMindMaps" element={<Class7icseCivicsHistoryJahangirandShahJahanMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanPracticeQuestions" element={<Class7icseCivicsHistoryJahangirandShahJahanPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiClassNotes" element={<Class7icseCivicsHistoryAurangzebandShivajiClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiChapterNotes" element={<Class7icseCivicsHistoryAurangzebandShivajiChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiMindMaps" element={<Class7icseCivicsHistoryAurangzebandShivajiMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiPracticeQuestions" element={<Class7icseCivicsHistoryAurangzebandShivajiPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchangesClassNotes" element={<Class7icseCivicsHistorySocialandCulturalChangesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchangesChapterNotes" element={<Class7icseCivicsHistorySocialandCulturalChangesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchangesMindMaps" element={<Class7icseCivicsHistorySocialandCulturalChangesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/socialandculturalchangesPracticeQuestions" element={<Class7icseCivicsHistorySocialandCulturalChangesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitutionClassNotes" element={<Class7icseCivicsHistoryOurConstitutionClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitutionChapterNotes" element={<Class7icseCivicsHistoryOurConstitutionChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitutionMindMaps" element={<Class7icseCivicsHistoryOurConstitutionMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/ourconstitutionPracticeQuestions" element={<Class7icseCivicsHistoryOurConstitutionPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesClassNotes" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesChapterNotes" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesMindMaps" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesPracticeQuestions" element={<Class7icseCivicsHistoryFundamentalRightsandDutiesPracticeQuestions />} />
+
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyClassNotes" element={<Class7icseCivicsHistoryDirectivePrinciplesClassNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyChapterNotes" element={<Class7icseCivicsHistoryDirectivePrinciplesChapterNotes />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyMindMaps" element={<Class7icseCivicsHistoryDirectivePrinciplesMindMaps />} />
+<Route path="/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyPracticeQuestions" element={<Class7icseCivicsHistoryDirectivePrinciplesPracticeQuestions />} />
+
 <Route path="/studymaterial/class6icse/Class6icseSocialScience" element={<Class6icseSocialScience />} />
 <Route path="/studymaterial/class6icse/Class6icseEnglish" element={<Class6icseEnglish />} />
 <Route path="/studymaterial/class6icse/Class6icseEnglishGrammar" element={<Class6icseEnglishGrammar />} />
 <Route path="/studymaterial/class7icse" element={<Class7icse />} />
 <Route path="/studymaterial/class7icse/Class7icseScience" element={<Class7icseScience />} />
 <Route path="/studymaterial/class7icse/Class7icseMathematics" element={<Class7icseMathematics />} />
-<Route path="/studymaterial/class7icse/Class7icseSocialScience" element={<Class7icseSocialScience />} />
+<Route path="/studymaterial/class7icse/Class7icseGeography" element={<Class7icseGeography />} />
 <Route path="/studymaterial/class7icse/Class7icseEnglish" element={<Class7icseEnglish />} />
 <Route path="/studymaterial/class7icse/Class7icseEnglishGrammar" element={<Class7icseEnglishGrammar />} />
 <Route path="/studymaterial/class10/Class10Geography" element={<Class10Geography />} />
@@ -711,6 +1119,14 @@ function App() {
 <Route path="/studymaterial/class7/Class7CbseSstUnpackingGenderClassNotes" element={<Class7CbseSstUnpackingGenderClassNotes />} />
 <Route path="/studymaterial/class7/Class7CbseSstWaterSurroundingTheEarthDetailedNotes" element={<Class7CbseSstWaterSurroundingTheEarthDetailedNotes />} />
 <Route path="/studymaterial/class7/Class7CbseSstWaterSurroundingTheEarthClassNotes" element={<Class7CbseSstWaterSurroundingTheEarthClassNotes />} />
+<Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1' element={<Class10cbsesstpracticepaper1 />} />  
+<Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2' element={<Class10cbsesstpracticepaper2 />} />
+
+
+
+
+
+
         </Routes> 
         <ToastContainer />
     </div>

@@ -5,9 +5,15 @@ const Class9 = () => {
   const navigate = useNavigate();
   const handleScienceClick = () => navigate('/studymaterial/class9/Class9Science');
   const handleMathematicsClick = () => navigate('/studymaterial/class9/Class9Mathematics');
-  const handleSocialScienceClick = () => navigate('/studymaterial/class9/Class9SocialScience');
   const handleEnglishClick = () => navigate('/studymaterial/class9/Class9English');
   const handleEnglishGrammarClick = () => navigate('/studymaterial/class9/Class9EnglishGrammar');
+  const handleHistoryClick = () => navigate('/studymaterial/class9/Class9History');
+  const handleGeographyClick = () => navigate('/studymaterial/class9/Class9Geography');
+  const handleCivicsClick = () => navigate('/studymaterial/class9/Class9Civics');
+  const handleEconomicsClick = () => navigate('/studymaterial/class9/Class9Economics');
+  const handleExtraResourcesClick = () => navigate('/studymaterial/class9/Class9extraresources');
+
+  
 
   return (
     <div className="mt-17 min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 p-4 sm:p-6 font-inter text-gray-800">
@@ -56,10 +62,7 @@ const Class9 = () => {
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363612/maths_u9nmij.png" alt="Maths Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Mathematics Class 9</h3>
           </button>
-          <button onClick={handleSocialScienceClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363611/history_f9lgfe.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Social Studies Class 9</h3>
-          </button>
+         
           <button onClick={handleEnglishClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363608/English_Language_x7iejs.png" alt="English Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Class 9</h3>
@@ -68,6 +71,35 @@ const Class9 = () => {
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363610/GrammarLanguage_w7qszs.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Grammar</h3>
           </button>
+        <button onClick={handleHistoryClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363611/history_f9lgfe.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">History Class 9</h3>
+          </button>
+        <button onClick={handleGeographyClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363609/geography_shfqrc.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Geography Class 9</h3>
+          </button>
+        <button onClick={handleCivicsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363607/civics_mnw9ja.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Civics Class 9</h3>
+          </button>
+        <button onClick={handleEconomicsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1755455100/conomics_jwb2wv.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Economics Class 9</h3>
+          </button>
+        <button onClick={handleExtraResourcesClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1757013643/extra_resources_gl2vba.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Extra Resources</h3>
+          </button>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         </div>
       </section>
     </div>

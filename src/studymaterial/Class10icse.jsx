@@ -51,31 +51,31 @@ const Class10icse = () => {
         <h2 className="sr-only">Choose a Subject</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <button onClick={handleScienceClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/science.png" alt="Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363614/science_cjdndm.png" alt="Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Science Class 10 ICSE</h3>
           </button>
           <button onClick={handleMathematicsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/maths.png" alt="Maths Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363612/maths_u9nmij.png" alt="Maths Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Mathematics Class 10 ICSE</h3>
           </button>
           <button onClick={handleHistoryClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/history.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363611/history_f9lgfe.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">History Class 10 ICSE</h3>
           </button>
           <button onClick={handleGeographyClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/geography.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363609/geography_shfqrc.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Geography Class 10 ICSE</h3>
           </button>
           <button onClick={handleCivicsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/civics.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363607/civics_mnw9ja.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Civics Class 10 ICSE</h3>
           </button>
           <button onClick={handleEnglishClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/English Language.png" alt="English Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363608/English_Language_x7iejs.png" alt="English Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Class 10 ICSE</h3>
           </button>
           <button onClick={handleEnglishGrammarClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="/SubjectLogo/GrammarLanguage.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363610/GrammarLanguage_w7qszs.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Grammar</h3>
           </button>
         </div>

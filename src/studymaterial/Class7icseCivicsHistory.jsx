@@ -39,122 +39,122 @@ const Class7icseCivicsHistory = () => {
             {
               num: '01', 
               title: 'The Advent of Christianity',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-01/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-01/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-01/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-01/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theadventofchristianityClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theadventofchristianityChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/theadventofchristianityMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/theadventofchristianityPracticeQuestions')
             },
             {
               num: '02', 
               title: 'The Emergence of Islam',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-02/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-02/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-02/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-02/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theemergenceofislamClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theemergenceofislamChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/theemergenceofislamMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/theemergenceofislamPracticeQuestions')
             },
             {
               num: '03', 
               title: 'The Turkish Invasions',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-03/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-03/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-03/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-03/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theturkishinvasionsClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theturkishinvasionsChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/theturkishinvasionsMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/theturkishinvasionsPracticeQuestions')
             },
             {
               num: '04', 
               title: 'The Slave Dynasty',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-04/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-04/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-04/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-04/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theslavedynastyClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/theslavedynastyChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/theslavedynastyMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/theslavedynastyPracticeQuestions')
             },
             {
               num: '05', 
               title: 'The Khalji Dynasty',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-05/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-05/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-05/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-05/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thekhaljidynastyClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thekhaljidynastyChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/thekhaljidynastyMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/thekhaljidynastyPracticeQuestions')
             },
             {
               num: '06', 
               title: 'The Tughluq and Lodi Dynasties',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-06/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-06/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-06/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-06/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/thetughluqandlodidynastiesPracticeQuestions')
             },
             {
               num: '07', 
               title: 'Vijayanagara and Bahmani Kingdoms',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-07/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-07/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-07/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-07/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/thevijayanagaraandbahmanikingdomsPracticeQuestions')
             },
             {
               num: '08', 
               title: 'Advent of the Mughals',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-08/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-08/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-08/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-08/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/adventofthemughalsClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/adventofthemughalsChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/adventofthemughalsMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/adventofthemughalsPracticeQuestions')
             },
             {
               num: '09', 
               title: 'Akbar',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-09/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-09/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-09/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-09/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/akbarClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/akbarChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/akbarMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/akbarPracticeQuestions')
             },
             {
               num: '10', 
               title: 'Jahangir and Shah Jahan',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-10/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-10/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-10/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-10/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/jahangirandshahjahanPracticeQuestions')
             },
             {
               num: '11', 
               title: 'Aurangzeb and Shivaji',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-11/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-11/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-11/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-11/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/aurangzebandshivajiPracticeQuestions')
             },
             {
               num: '12', 
               title: 'Social and Cultural Changes',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-12/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-12/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-12/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-12/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/socialandculturalchangesClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/socialandculturalchangesChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/socialandculturalchangesMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/socialandculturalchangesPracticeQuestions')
             },
             {
               num: '13', 
               title: 'Our Constitution',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-13/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-13/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-13/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-13/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/ourconstitutionClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/ourconstitutionChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/ourconstitutionMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/ourconstitutionPracticeQuestions')
             },
             {
               num: '14', 
               title: 'Fundamental Rights and Duties',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-14/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-14/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-14/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-14/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/fundamentallightsanddutiesPracticeQuestions')
             },
             {
               num: '15', 
               title: 'Directive Principles of State Policy',
-              classNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-15/class-notes'),
-              chapterNotes: () => window.open('/studymaterial/class7icse/civics-history/chapter-15/chapter-notes'),
-              mindMaps: () => window.open('/studymaterial/class7icse/civics-history/chapter-15/mind-maps'),
-              practiceQuestions: () => window.open('/studymaterial/class7icse/civics-history/chapter-15/practice-questions')
+              classNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyClassNotes'),
+              chapterNotes: () => window.open('/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyChapterNotes'),
+              mindMaps: () => window.open('/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyMindMaps'),
+              practiceQuestions: () => window.open('/studymaterial/class7icse/civicsandhistory/directiveprinciplesofstatepolicyPracticeQuestions')
             },
           ].map((chapter, idx) => (
             <div key={chapter.num} className="bg-white rounded-xl shadow-md border border-blue-100 overflow-hidden">

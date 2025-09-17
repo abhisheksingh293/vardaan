@@ -58,7 +58,7 @@ const Class10Civics = () => {
         </svg>
         <div className="relative p-8 sm:p-12 text-center text-white">
           <h1 className="text-3xl sm:text-5xl font-extrabold drop-shadow-lg">
-            <span className="block sm:inline">Civics (Political Science)</span>
+            <span className="block sm:inline">Civics</span>
             <span className="block sm:inline whitespace-nowrap"> Class 10 CBSE</span>
           </h1>
           <p className="mt-1 text-md sm:text-lg italic text-orange-100">Study material by Ankit Bhaiya.</p>
