@@ -440,6 +440,14 @@ import HallOfFame from './components/HallOfFame.jsx';
 
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes.jsx';
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes.jsx';
+import Class10cbseextraResource from './studymaterial/Class10cbseextraResource.jsx';
+import Class10cbsesstpracticepaper1 from './studymaterial/Class10cbsesstpracticepaper1.jsx';
+import Class10cbsesstpracticepaper2 from './studymaterial/Class10cbsesstpracticepaper2.jsx';
+
+import UpcomingNotes from './components/UpcomingNotes';
+import Class10sstHalfyearly2025ImportantQuestions from './studymaterial/Class10sstHalfyearly2025ImportantQuestions.jsx';
+
+
 
 
 function ScrollToTop() {
@@ -558,8 +566,15 @@ function App() {
           <Route path="/studymaterial/class8/Class8Mathematics" element={<Class8Mathematics />} />
           <Route path="/studymaterial/class8/Class8SocialScience" element={<Class8SocialScience />} />
 
+<<<<<<< HEAD
           <Route path="/studymaterial/class10/extraresources" element={<SstImportQuestionHalfYearly />} />
 
+=======
+          <Route path="/studymaterial/class10/extraresources" element={<Class10cbseextraResource />} />
+          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1" element={<Class10cbsesstpracticepaper1 />} />
+          <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2" element={<Class10cbsesstpracticepaper2 />} />
+          <Route path="/studymaterial/class10/extraresources/Class10sstHalfyearly2025ImportantQuestions" element={<Class10sstHalfyearly2025ImportantQuestions />} />
+>>>>>>> 1e32cf4 ( some more upcoming components are added and sst important question class 10 cbse added)
 
 
 
