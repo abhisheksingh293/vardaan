@@ -33,15 +33,15 @@ const Class10cbseextraResource = () => {
       iconBg: 'bg-green-100',
       iconColor: 'text-green-600'
     },
-    // {
-    //   name: "Practice Questions",
-    //   path: "/studymaterial/class10/extraresources/practice-questions",
-    //   description: "Half Yearly 2025",
-    //   icon: "📝",
-    //   bgGradient: 'from-green-500 to-green-600',
-    //   iconBg: 'bg-green-100',
-    //   iconColor: 'text-green-600'
-    // },
+    {
+      name: "SST",
+      path: "/studymaterial/class10/extraresources/Class10cbsecivicsHalfYearlyExamination2025_26",
+      description: "Half Yearly 2025",
+      icon: "📝",
+      bgGradient: 'from-green-500 to-green-600',
+      iconBg: 'bg-green-100',
+      iconColor: 'text-green-600'
+    },
     // {
     //   name: "Revision Notes",
     //   path: "/studymaterial/class10/extraresources/revision-notes",

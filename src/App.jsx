@@ -443,6 +443,7 @@ import Class8cbseSocialScienceTheNationalistMovement1870To1947ChapterNotes from 
 import Class10cbseextraResource from './studymaterial/Class10cbseextraResource.jsx';
 import Class10cbsesstpracticepaper1 from './studymaterial/Class10cbsesstpracticepaper1.jsx';
 import Class10cbsesstpracticepaper2 from './studymaterial/Class10cbsesstpracticepaper2.jsx';
+import Class10cbsecivicsHalfYearlyExamination2025_26 from './studymaterial/Class10cbsecivicsHalfYearlyExamination2025_26.jsx';
 
 import UpcomingNotes from './components/UpcomingNotes';
 import Class10sstHalfyearly2025ImportantQuestions from './studymaterial/Class10sstHalfyearly2025ImportantQuestions.jsx';
@@ -1132,7 +1133,7 @@ function App() {
 <Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper1' element={<Class10cbsesstpracticepaper1 />} />  
 <Route path='/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2' element={<Class10cbsesstpracticepaper2 />} />
 
-
+<Route path='/studymaterial/class10/extraresources/Class10cbsecivicsHalfYearlyExamination2025_26' element={<Class10cbsecivicsHalfYearlyExamination2025_26/>}/>
 
 
 

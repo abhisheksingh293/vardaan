@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // --- THEME DEFINITIONS (Converted to JS objects for inline styles) ---
 const themes = {
@@ -1136,7 +1136,7 @@ const QuestionCard = ({ item, showAll, currentTheme }) => {
         borderRadius: '8px',
         overflow: 'hidden',
         transition: 'max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.3s',
-        maxHeight: isAnswerVisible ? '500px' : '0',
+        maxHeight: isAnswerVisible ? '2000px' : '0',
         opacity: isAnswerVisible ? 1 : 0,
         marginTop: isAnswerVisible ? '16px': '0'
     };
