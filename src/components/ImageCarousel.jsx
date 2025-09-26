@@ -34,8 +34,8 @@ const ImageCarousel = () => {
   }, [current, slides.length]);
 
   return (
-    <div className="w-full flex flex-col items-center py-12 bg-white px-4 md:px-12">
-      <h3 className="text-3xl md:text-4xl font-extrabold text-[#ff4e3c] mb-8 text-center">What We Offer
+    <div className="w-full flex flex-col items-center py-5 bg-white px-4 md:px-12">
+      <h3 className="text-4xl md:text-4xl font-extrabold text-[#ff4e3c] mb-8 text-center">What We Offer
       </h3>
       <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-2xl shadow-lg" style={{ height: isMobile ? '440px' : undefined, bottom: isMobile ? '16px' : undefined }}>
         <div

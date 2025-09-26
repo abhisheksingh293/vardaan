@@ -7,6 +7,7 @@ import Class9CivicsWhatIsDemocracyWhyDemocracyMindMaps from './studymaterial/Cla
 import Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyPracticeQuestions.jsx';
 import Class9Civics from './studymaterial/Class9Civics.jsx';
 import Class9History from './studymaterial/Class9History.jsx';
+import Class9SocialScience from './studymaterial/Class9SocialScience.jsx';
 import Class9HistoryTheFrenchRevolutionClassNotes from './studymaterial/Class9HistoryTheFrenchRevolutionClassNotes.jsx';
 import Class9HistoryTheFrenchRevolutionChapterNotes from './studymaterial/Class9HistoryTheFrenchRevolutionChapterNotes.jsx';
 import Class9HistoryTheFrenchRevolutionMindMaps from './studymaterial/Class9HistoryTheFrenchRevolutionMindMaps.jsx';
@@ -958,6 +959,7 @@ function App() {
 
           {/* Class 9 CBSE Subject Pages */}
           <Route path="/studymaterial/class9" element={<Class9 />} />
+<Route path="/studymaterial/class9/Class9SocialScience" element={<Class9SocialScience />} />
 <Route path="/studymaterial/class9/Class9Science" element={<Class9Science />} />
 <Route path="/studymaterial/class9/Class9Mathematics" element={<Class9Mathematics />} />
 <Route path="/studymaterial/class9/Class9English" element={<Class9English />} />

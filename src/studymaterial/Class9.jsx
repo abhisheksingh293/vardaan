@@ -7,10 +7,11 @@ const Class9 = () => {
   const handleMathematicsClick = () => navigate('/studymaterial/class9/Class9Mathematics');
   const handleEnglishClick = () => navigate('/studymaterial/class9/Class9English');
   const handleEnglishGrammarClick = () => navigate('/studymaterial/class9/Class9EnglishGrammar');
-  const handleHistoryClick = () => navigate('/studymaterial/class9/Class9History');
-  const handleGeographyClick = () => navigate('/studymaterial/class9/Class9Geography');
-  const handleCivicsClick = () => navigate('/studymaterial/class9/Class9Civics');
-  const handleEconomicsClick = () => navigate('/studymaterial/class9/Class9Economics');
+  const handleSocialScienceClick = () => navigate('/studymaterial/class9/Class9SocialScience');
+  // const handleHistoryClick = () => navigate('/studymaterial/class9/Class9History');
+  // const handleGeographyClick = () => navigate('/studymaterial/class9/Class9Geography');
+  // const handleCivicsClick = () => navigate('/studymaterial/class9/Class9Civics');
+  // const handleEconomicsClick = () => navigate('/studymaterial/class9/Class9Economics');
   const handleExtraResourcesClick = () => navigate('/studymaterial/class9/Class9extraresources');
 
   
@@ -71,7 +72,14 @@ const Class9 = () => {
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363610/GrammarLanguage_w7qszs.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Grammar</h3>
           </button>
-        <button onClick={handleHistoryClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+
+          <button onClick={handleSocialScienceClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363611/social_science_ayqj1q.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Social Science Class 9</h3>
+          </button>
+
+
+        {/* <button onClick={handleHistoryClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363611/history_f9lgfe.png" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">History Class 9</h3>
           </button>
@@ -86,7 +94,7 @@ const Class9 = () => {
         <button onClick={handleEconomicsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1755455100/conomics_jwb2wv.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Economics Class 9</h3>
-          </button>
+          </button> */}
         <button onClick={handleExtraResourcesClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1757013643/extra_resources_gl2vba.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Extra Resources</h3>

@@ -45,6 +45,13 @@ const Class8 = () => {
           Explore Subjects
         </button>
       </header>
+
+
+
+      
+
+
+
       <section className="max-w-6xl mx-auto mb-12">
         <h2 className="sr-only">Choose a Subject</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -65,8 +72,8 @@ const Class8 = () => {
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Class 8</h3>
           </button>
           <button onClick={handleEnglishGrammarClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
-            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363610/GrammarLanguage_w7qszs.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Grammar</h3>
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1757013643/extra_resources_gl2vba.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Extra Resources</h3>
           </button>
         </div>
       </section>

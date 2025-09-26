@@ -120,14 +120,14 @@ const LandingPage = () => {
         <section className="section-fit rounded-3xl shadow-lg p-4 md:p-6 relative overflow-hidden">
           {/* Chalkboard overlay */}
           <div className="absolute inset-0 w-full h-full z-0 overflow-hidden rounded-3xl">
-  <img
-    src="https://www.shutterstock.com/shutterstock/videos/1105569307/thumb/12.jpg?ip=x480"
-    alt="Chalkboard background"
-    style={{ filter: 'blur(4px) brightness(0.8)' }}
-    className="w-full h-full object-cover"
-  />
-  <div className="absolute inset-0 bg-black/60"></div>
-</div>
+            <img
+              src="https://www.shutterstock.com/shutterstock/videos/1105569307/thumb/12.jpg?ip=x480"
+              alt="Chalkboard background"
+              style={{ filter: "blur(4px) brightness(0.8)" }}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
           <div className="relative z-20 w-full flex flex-col md:flex-row items-center justify-center px-4 pt-8">
             {/* Left Side */}
             <div className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto py-12">
@@ -148,21 +148,24 @@ const LandingPage = () => {
                 className="block md:hidden mx-auto mb-8 w-full max-w-full px-0 h-auto"
               />
               <div className="flex flex-col md:flex-row gap-8 w-full max-w-lg justify-center mb-12">
-  <button
-    onClick={() => navigate("/vardaan-junior")}
-    className="hover:cursor-pointer px-6 py-2 bg-gradient-to-r from-[#ff4e1e] to-[#ffb200] rounded-xl text-white font-semibold text-2xl focus:outline-none transition-all whitespace-nowrap"
-  >
-    Vardaan Junior
-  </button>
-  <button
-    onClick={() => navigate("/vardaan-senior")}
-    className="hover:cursor-pointer px-6 py-2 bg-gradient-to-r from-[#ff4e1e] to-[#ffb200] rounded-xl text-white font-semibold text-2xl focus:outline-none transition-all whitespace-nowrap"
-  >
-    Vardaan Senior
-  </button>
-</div>
+                <button
+                  onClick={() => navigate("/vardaan-junior")}
+                  className="hover:cursor-pointer px-6 py-2 bg-gradient-to-r from-[#ff4e1e] to-[#ffb200] rounded-xl text-white font-semibold text-2xl focus:outline-none transition-all whitespace-nowrap"
+                >
+                  Vardaan Junior
+                </button>
+                <button
+                  onClick={() => navigate("/vardaan-senior")}
+                  className="hover:cursor-pointer px-6 py-2 bg-gradient-to-r from-[#ff4e1e] to-[#ffb200] rounded-xl text-white font-semibold text-2xl focus:outline-none transition-all whitespace-nowrap"
+                >
+                  Vardaan Senior
+                </button>
+              </div>
               <div className="text-[#ffb200] text-4xl md:text-4xl font-extrabold mb-0">
-                <a href="tel:+919508841336" className="hover:underline hover:text-[#ffcc00] transition-colors duration-200 text-3xl md:text-4xl">
+                <a
+                  href="tel:+919508841336"
+                  className="hover:underline hover:text-[#ffcc00] transition-colors duration-200 text-3xl md:text-4xl"
+                >
                   +91 9508841336
                 </a>
               </div>
@@ -178,7 +181,7 @@ const LandingPage = () => {
           </div>
         </section>
         {/* Learning Track Section */}
-        <section className="section-fit w-full bg-[#f7f8fa] pt-4 pb-16 flex flex-col items-center max-w-7xl mx-auto mt-12 ">
+        <section className="section-fit w-full bg-[#f7f8fa] pt-4 pb-10 flex flex-col items-center max-w-7xl mx-auto mt-12 ">
           <h2 className="text-[#ff4e3c] text-3xl md:text-5xl font-extrabold mb-12 text-center">
             Find Your Perfect Learning Track
           </h2>
@@ -216,20 +219,20 @@ const LandingPage = () => {
                 </li>
               </ul>
               <div className="flex gap-4 mb-7">
-                <button 
+                <button
                   onClick={() => navigate("/vardaan-junior?class=1-3")}
                   className="hover:cursor-pointer bg-white border border-blue-400 text-blue-600 font-bold rounded-full px-8 py-2 text-md md:text-lg shadow-sm hover:bg-blue-50 transition-colors"
                 >
                   Class I–III
                 </button>
-                <button 
+                <button
                   onClick={() => navigate("/vardaan-junior?class=4-5")}
                   className="hover:cursor-pointer bg-white border border-blue-400 text-blue-600 font-bold rounded-full px-8 py-2 text-md md:text-lg shadow-sm hover:bg-blue-50 transition-colors"
                 >
                   Class IV–V
                 </button>
               </div>
-              <button 
+              <button
                 onClick={() => navigate("/vardaan-junior")}
                 className="hover:cursor-pointer py-2 w-full bg-gradient-to-r from-[#ff3300] to-[#ffb200] text-white font-extrabold rounded-full px-8 text-2xl mt-auto shadow-md hover:opacity-90 transition-opacity"
               >
@@ -268,26 +271,26 @@ const LandingPage = () => {
                 </li>
               </ul>
               <div className="flex gap-4 mb-7 flex-wrap justify-center">
-                <button 
+                <button
                   onClick={() => navigate("/vardaan-senior?class=6-8")}
                   className="bg-white border border-orange-400 text-orange-600 font-bold rounded-full px-8 py-2 text-md md:text-lg shadow-sm hover:bg-orange-50 transition-colors"
                 >
                   Std VI–VIII
                 </button>
-                <button 
+                <button
                   onClick={() => navigate("/vardaan-senior?class=9-10")}
                   className="bg-white border border-orange-400 text-orange-600 font-bold rounded-full px-8 py-2 text-md md:text-lg shadow-sm hover:bg-orange-50 transition-colors"
                 >
                   IX–X
                 </button>
-                <button 
+                <button
                   onClick={() => navigate("/vardaan-senior?class=11-12")}
                   className="bg-white border border-orange-400 text-orange-600 font-bold rounded-full px-8 py-2 text-md md:text-lg shadow-sm hover:bg-orange-50 transition-colors"
                 >
                   XI–XII
                 </button>
               </div>
-              <button 
+              <button
                 onClick={() => navigate("/vardaan-senior")}
                 className="hover:cursor-pointer py-2 w-full bg-gradient-to-r from-[#ff3300] to-[#ffb200] text-white font-extrabold rounded-full px-8 text-2xl mt-auto shadow-md hover:opacity-90 transition-opacity"
               >
@@ -301,7 +304,7 @@ const LandingPage = () => {
         <ImageCarousel />
 
         {/* Meet Ankit Bhaiya Section */}
-        <section className="w-full flex flex-col items-center py-16 bg-[#fff9f3] px-4 md:px-0 mb-12">
+        <section className="w-full flex flex-col items-center bg-[#fff9f3] px-4 md:px-0 mb-12">
           <h2 className="text-[#ff4e3c] text-3xl md:text-5xl font-extrabold mb-8 text-center">
             Meet Ankit Bhaiya
           </h2>
@@ -313,7 +316,7 @@ const LandingPage = () => {
         </section>
 
         {/* Study Material Section */}
-        <section className="landing-section study-resources-section py-16 bg-white px-4 md:px-12 lg:px-24 xl:px-32">
+        <section className="landing-section study-resources-section py-5 bg-white px-4 md:px-12 lg:px-24 xl:px-32">
           <div className="max-w-7xl mx-auto w-full">
             <h2 className="text-[#ff4e3c] text-3xl md:text-5xl font-extrabold mb-2 text-center">
               Study Material
@@ -323,146 +326,235 @@ const LandingPage = () => {
               journey.
             </div>
             <div className="study-resources-grid flex flex-col md:flex-row gap-6 sm:gap-8 w-full">
-            {/* Notes Card */}
-            <Link
-              to="/notes"
-              className="study-resource-card notes flex-1 rounded-2xl border-2 border-yellow-300 bg-yellow-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition no-underline relative"
-              data-discover="true"
-            >
-              <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left">
-                Notes
-              </div>
-              <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
-                Use Vardaan's detailed study materials that simplify complex
-                ideas into easily understandable language.
-              </div>
-              <div className="resource-card-illustration flex justify-start mb-2">
-                {/* SVG for Notes */}
-                <svg width="80" height="80" fill="none">
-                  <rect
-                    x="10"
-                    y="20"
-                    width="60"
-                    height="40"
-                    rx="8"
-                    fill="#fbbf24"
-                    opacity="0.12"
-                  ></rect>
-                  <rect
-                    x="16"
-                    y="26"
-                    width="48"
-                    height="28"
-                    rx="4"
-                    fill="#fbbf24"
-                  ></rect>
-                  <rect
-                    x="24"
-                    y="32"
-                    width="32"
-                    height="5"
-                    rx="2.5"
-                    fill="#fff"
-                  ></rect>
-                  <rect
-                    x="24"
-                    y="41"
-                    width="20"
-                    height="5"
-                    rx="2.5"
-                    fill="#fff"
-                  ></rect>
-                </svg>
-              </div>
-              <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-yellow-400">
-                →
-              </span>
-            </Link>
-            {/* Reference Books Card */}
-            <Link
-              to="/book-solutions"
-              className="study-resource-card books flex-1 rounded-2xl border-2 border-blue-300 bg-blue-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition no-underline relative"
-              data-discover="true"
-            >
-              <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left">
-                Books Solutions
-              </div>
-              <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
-                Our experts have created thorough study materials that break
-                down complicated concepts into easily understandable content.
-              </div>
-              <div className="resource-card-illustration flex justify-start mb-2">
-                {/* SVG for Reference Books */}
-                <svg width="80" height="80" fill="none">
-                  <rect
-                    x="20"
-                    y="30"
-                    width="40"
-                    height="20"
-                    rx="6"
-                    fill="#38bdf8"
-                    opacity="0.12"
-                  ></rect>
-                  <rect
-                    x="26"
-                    y="36"
-                    width="28"
-                    height="8"
-                    rx="2"
-                    fill="#38bdf8"
-                  ></rect>
-                  <rect
-                    x="30"
-                    y="44"
-                    width="20"
-                    height="4"
-                    rx="2"
-                    fill="#fff"
-                  ></rect>
-                </svg>
-              </div>
-              <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-blue-400">
-                →
-              </span>
-            </Link>
-            {/* NCERT Solutions Card */}
-            <Link
-              to="/ncertbooks"
-              className="study-resource-card ncert flex-1 rounded-2xl border-2 border-pink-300 bg-pink-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition no-underline relative"
-              data-discover="true"
-            >
-              <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left">
-                NCERT Books
-              </div>
-              <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
-                Unlock academic excellence with Vardaan's NCERT Books which
-                provide you step-by-step solutions.
-              </div>
-              <div className="resource-card-illustration flex justify-start mb-2">
-                {/* SVG for NCERT Solutions */}
-                <svg width="80" height="80" fill="none">
-                  <circle
-                    cx="40"
-                    cy="40"
-                    r="28"
-                    fill="#fb7185"
-                    opacity="0.12"
-                  ></circle>
-                  <path
-                    d="M40 25v30"
-                    stroke="#fb7185"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  ></path>
-                  <circle cx="40" cy="40" r="7" fill="#fb7185"></circle>
-                  <circle cx="40" cy="40" r="4" fill="#fff"></circle>
-                </svg>
-              </div>
-              <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-pink-400">
-                →
-              </span>
-            </Link>
-          </div>
+              {/* Notes Card */}
+              <Link
+                to="/studymaterial"
+                className="study-resource-card notes flex-1 rounded-2xl border-2 border-yellow-300 bg-yellow-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-2 hover:scale-105 no-underline relative animate-fade-in"
+                data-discover="true"
+              >
+                <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left flex items-center gap-2">
+                  <span className="inline-block text-yellow-400 text-2xl">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-7 h-7"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 6v6l4 2"
+                      />
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        fill="#fde68a"
+                        stroke="#fbbf24"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </span>
+                  Study Material
+                </div>
+                <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
+                  Access Vardaan's Study Material—comprehensive resources and
+                  notes designed to make learning easier and more effective.
+                </div>
+                <div className="resource-card-illustration flex justify-start mb-2">
+                  {/* SVG for Notes */}
+                  <svg width="80" height="80" fill="none">
+                    <rect
+                      x="10"
+                      y="20"
+                      width="60"
+                      height="40"
+                      rx="8"
+                      fill="#fbbf24"
+                      opacity="0.12"
+                    ></rect>
+                    <rect
+                      x="16"
+                      y="26"
+                      width="48"
+                      height="28"
+                      rx="4"
+                      fill="#fbbf24"
+                    ></rect>
+                    <rect
+                      x="24"
+                      y="32"
+                      width="32"
+                      height="5"
+                      rx="2.5"
+                      fill="#fff"
+                    ></rect>
+                    <rect
+                      x="24"
+                      y="41"
+                      width="20"
+                      height="5"
+                      rx="2.5"
+                      fill="#fff"
+                    ></rect>
+                  </svg>
+                </div>
+                <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-yellow-400">
+                  →
+                </span>
+              </Link>
+              {/* Reference Books Card */}
+              <Link
+                to="/book-solutions"
+                className="study-resource-card books flex-1 rounded-2xl border-2 border-blue-300 bg-blue-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-2 hover:scale-105 no-underline relative animate-fade-in"
+                data-discover="true"
+              >
+                <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left flex items-center gap-2">
+                  <span className="inline-block text-blue-400 text-2xl">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-7 h-7"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 19.5A2.25 2.25 0 006.25 21h11.5A2.25 2.25 0 0020 18.75V6.75A2.25 2.25 0 0017.75 4.5H6.25A2.25 2.25 0 004 6.75v12.75z"
+                      />
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        fill="#bae6fd"
+                        stroke="#38bdf8"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </span>
+                  Books Solutions
+                </div>
+                <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
+                  Our experts have created thorough study materials that break
+                  down complicated concepts into easily understandable content.
+                </div>
+                <div className="resource-card-illustration flex justify-start mb-2">
+                  {/* SVG for Reference Books */}
+                  <svg width="80" height="80" fill="none">
+                    <rect
+                      x="20"
+                      y="30"
+                      width="40"
+                      height="20"
+                      rx="6"
+                      fill="#38bdf8"
+                      opacity="0.12"
+                    ></rect>
+                    <rect
+                      x="26"
+                      y="36"
+                      width="28"
+                      height="8"
+                      rx="2"
+                      fill="#38bdf8"
+                    ></rect>
+                    <rect
+                      x="30"
+                      y="44"
+                      width="20"
+                      height="4"
+                      rx="2"
+                      fill="#fff"
+                    ></rect>
+                  </svg>
+                </div>
+                <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-blue-400">
+                  →
+                </span>
+              </Link>
+              {/* NCERT Solutions Card */}
+
+              <Link
+                to="/book-solutions"
+                className="study-resource-card books flex-1 rounded-2xl border-2 border-blue-300 bg-blue-50 p-8 flex flex-col items-start justify-between shadow hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-2 hover:scale-105 no-underline relative animate-fade-in"
+                data-discover="true"
+              >
+                <div className="resource-card-header text-xl font-extrabold text-red-600 mb-2 text-left flex items-center gap-2">
+                  <span className="inline-block text-blue-400 text-2xl">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-7 h-7"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 19.5A2.25 2.25 0 006.25 21h11.5A2.25 2.25 0 0020 18.75V6.75A2.25 2.25 0 0017.75 4.5H6.25A2.25 2.25 0 004 6.75v12.75z"
+                      />
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        fill="#bae6fd"
+                        stroke="#38bdf8"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </span>
+                  NCERT Books
+                </div>
+                <div className="resource-card-desc text-gray-700 mb-6 sm:mb-8 text-left">
+                  Unlock academic excellence with NCERT Books which provide you
+                  step-by-step solutions.
+                </div>
+                <div className="resource-card-illustration flex justify-start mb-2">
+                  {/* SVG for Reference Books */}
+                  <svg width="80" height="80" fill="none">
+                    <rect
+                      x="20"
+                      y="30"
+                      width="40"
+                      height="20"
+                      rx="6"
+                      fill="#38bdf8"
+                      opacity="0.12"
+                    ></rect>
+                    <rect
+                      x="26"
+                      y="36"
+                      width="28"
+                      height="8"
+                      rx="2"
+                      fill="#38bdf8"
+                    ></rect>
+                    <rect
+                      x="30"
+                      y="44"
+                      width="20"
+                      height="4"
+                      rx="2"
+                      fill="#fff"
+                    ></rect>
+                  </svg>
+                </div>
+                <span className="resource-card-arrow absolute right-6 bottom-6 text-2xl text-blue-400">
+                  →
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -578,7 +670,7 @@ const LandingPage = () => {
           style={{
             width: "100%",
             borderRadius: 40,
-            boxShadow: "0 2px 16px #b6e38833",
+            // boxShadow: "0 2px 16px #b6e38833",
             margin: "48px 0 0 0",
             padding: "0 5vw",
             textAlign: "center",
@@ -589,7 +681,7 @@ const LandingPage = () => {
         >
           <h2
             style={{
-              fontSize: 29,
+              fontSize: 40,
               fontWeight: 900,
               color: "#236d1e",
               marginBottom: 10,
@@ -601,7 +693,7 @@ const LandingPage = () => {
           </h2>
           <h2
             style={{
-              fontSize: 29,
+              fontSize: 40,
               fontWeight: 900,
               color: "#236d1e",
               marginBottom: 10,
@@ -624,12 +716,13 @@ const LandingPage = () => {
         <div
           className="show-on-mobile"
           style={{
-            margin: "32px 0 40px 0",
+            // margin: "32px 0 40px 0",
             display: "flex",
             justifyContent: "center",
           }}
         >
           <h2
+            className="text-[#236d1e] text-3xl md:text-5xl font-extrabold mb-8 text-center"
             style={{
               fontSize: 29,
               fontWeight: 900,
@@ -663,7 +756,7 @@ const LandingPage = () => {
         </div>
 
         {/* Why Choose Vardaan Section */}
-        <section className="w-full flex flex-col items-center py-16 bg-[#fff9f3] px-4 px-4 md:px-0 mt-12 mb-12 !px-4 md:!px-0">
+        <section className="w-full flex flex-col items-center bg-[#fff9f3] px-4 px-4 md:px-0 mt-12 mb-12 !px-4 md:!px-0">
           <h2 className="text-[#ff4e3c] text-3xl md:text-5xl font-extrabold mb-8 text-center">
             Why Choose Vardaan?
           </h2>
@@ -710,7 +803,7 @@ const LandingPage = () => {
         </section>
 
         {/* Extra Features Section */}
-        <section className="w-full flex flex-col items-center py-16 bg-[#fff9f3] px-4 md:px-0 mt-12 mb-12 !px-4 md:!px-0">
+        <section className="w-full flex flex-col items-center bg-[#fff9f3] px-4 md:px-0 mt-12 mb-12 !px-4 md:!px-0">
           <h2 className="text-[#ff4e3c] text-3xl md:text-5xl font-extrabold mb-8 text-center">
             More Reasons to Love Vardaan
           </h2>
@@ -763,22 +856,23 @@ const LandingPage = () => {
 
         {/* Footer Section */}
         <Footer />
-        
+
         {/* Floating WhatsApp Button - Mobile Only */}
-        <a 
-          href="https://wa.me/919508841336" 
-          target="_blank" 
+        <a
+          href="https://wa.me/919508841336"
+          target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-4 md:hidden z-50 bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-colors duration-200"
           aria-label="Chat on WhatsApp"
         >
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-            alt="WhatsApp" 
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
             className="w-8 h-8"
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = 'https://en.m.wikipedia.org/wiki/File:WhatsApp.svg';
+              e.target.src =
+                "https://en.m.wikipedia.org/wiki/File:WhatsApp.svg";
             }}
           />
         </a>
