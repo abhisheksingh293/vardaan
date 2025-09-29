@@ -401,6 +401,9 @@ import Class10GeographyMineralsAndEnergyResources from './studymaterial/Class10G
 import Class10GeographyManufacturingIndustries from './studymaterial/Class10GeographyManufacturingIndustries.jsx';
 import Class10GeographyLifelinesOfNationalEconomy from './studymaterial/Class10GeographyLifelinesOfNationalEconomy.jsx';
 import Class10Geography from './studymaterial/Class10Geography.jsx';
+
+
+import Class10ScienceElectricityPreviousYearQuestion from './studymaterial/Class10ScienceElectricityPreviousYearQuestion.jsx';
 import Map from './components/Map.jsx';
 
 
@@ -635,7 +638,7 @@ function App() {
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodChapterNotes" element={<Class8cbseSocialScienceTheModernPeriodChapterNotes />} />
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodClassNotes" element={<Class8cbseSocialScienceTheModernPeriodClassNotes />} />
       
-
+<Route path="/studymaterial/class10/Class10Science/Class10ScienceElectricityPreviousYearQuestion" element={<Class10ScienceElectricityPreviousYearQuestion />} />
 
 
           <Route path="/studymaterial/class8/Class8English" element={<Class8English />} />
