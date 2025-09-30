@@ -57,26 +57,28 @@ const ChapterContent = ({ chapterTitle, contentType, goBack }) => {
   );
 };
 
-// A reusable button component for the links
-const ActionButton = ({ label, onClick, hasContent }) => {
+import Lottie from 'lottie-react';
+import ChapterNotesAnim from '../assets/Animation JSON/Chapter_Notes.json';
+import ClassNotesAnim from '../assets/Animation JSON/Class_Notes.json';
+import MindMapAnim from '../assets/Animation JSON/Mind_Map.json';
+import QuizAnim from '../assets/Animation JSON/Quiz.json';
+import PrevYearAnim from '../assets/Animation JSON/Previous_year_Questions.json';
+import NcertPdfAnim from '../assets/Animation JSON/NCERT PDF.json';
+import NcertSolutionAnim from '../assets/Animation JSON/Ncert_Solution.json';
+
+const ActionButton = ({ label, onClick, hasContent, animationData }) => {
   const buttonClass = hasContent
     ? "bg-orange-200 text-orange-800 hover:bg-orange-300"
     : "bg-gray-200 text-gray-500 cursor-not-allowed";
-  const iconClass = hasContent ? "text-orange-800" : "text-gray-400";
   return (
     <button
       onClick={onClick}
       className={`flex flex-col items-center justify-center p-3 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md text-sm sm:text-base font-medium min-h-[100px] ${buttonClass}`}
       disabled={!hasContent}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 50 50"
-        className={`w-8 h-8 mb-1 ${iconClass}`}
-        fill="currentColor"
-      >
-        <path d="M 7 2 L 7 48 L 43 48 L 43 14.59375 L 42.71875 14.28125 L 30.71875 2.28125 L 30.40625 2 Z M 9 4 L 29 4 L 29 16 L 41 16 L 41 46 L 9 46 Z M 31 5.4375 L 39.5625 14 L 31 14 Z M 15 22 L 15 24 L 35 24 L 35 22 Z M 15 28 L 15 30 L 31 30 L 31 28 Z M 15 34 L 15 36 L 35 36 L 35 34 Z"></path>
-      </svg>
+      <div className="w-8 h-8 mb-1 pointer-events-none">
+        {animationData && <Lottie animationData={animationData} loop={true} className="w-8 h-8 mb-1" />}
+      </div>
       {label}
     </button>
   );
@@ -117,91 +119,91 @@ const App = () => {
       id: "01",
       title: "Resources: Utilisation and Development",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentPracticeQuestions",
       },
     },
     {
       id: "02",
       title: "Natural Resources: Land, Soil and Water",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterPracticeQuestions",
       },
     },
     {
       id: "03",
       title: "Natural Resources: Vegetation and Wildlife",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifeChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifeClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifeChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifeClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifePracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifePracticeQuestions",
       },
     },
     {
       id: "04",
       title: "Mineral and Energy Resources",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesPracticeQuestions",
       },
     },
     {
       id: "05",
       title: "Agriculture",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgriculturePracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgriculturePracticeQuestions",
       },
     },
     {
       id: "06",
       title: "Manufacturing Industries",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesPracticeQuestions",
       },
     },
     {
       id: "07",
       title: "Human Resources",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesPracticeQuestions",
       },
     },
     // UNIT-II OUR PAST-III (People & Society in Modern Period)
@@ -209,26 +211,26 @@ const App = () => {
       id: "08",
       title: "The Modern Period",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodClassNotes",
+        chapterNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodChapterNotes",
+        classNotes: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodPracticeQuestions",
+        practiceQuestions: "",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodPracticeQuestions",
       },
     },
     {
       id: "09",
       title: "Establishment of Company Rule in India",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaPracticeQuestions",
       },
     },
     {
@@ -274,13 +276,13 @@ const App = () => {
       id: "13",
       title: "Colonialism and Urban Change",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangeChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangeClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangeChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangeClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangePracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangePracticeQuestions",
       },
     },
     {
@@ -292,8 +294,8 @@ const App = () => {
         classNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheNationalistMovementClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheNationalistMovementPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheNationalistMovementPracticeQuestions",
       },
     },
     {
@@ -305,8 +307,8 @@ const App = () => {
         classNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceIndiaMarchesAheadClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceIndiaMarchesAheadPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceIndiaMarchesAheadPracticeQuestions",
       },
     },
     // UNIT-III RULE OF LAW AND SOCIAL JUSTICE
@@ -314,13 +316,13 @@ const App = () => {
       id: "16",
       title: "Our Constitution",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionPracticeQuestions",
       },
     },
     {
@@ -328,77 +330,77 @@ const App = () => {
       title:
         "Fundamental Rights, Fundamental Duties and Directive Principles of State Policy",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceFundamentalRightsDutiesAndDirectivePrinciplesOfStatePolicyChapterNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceFundamentalRightsDutiesAndDirectivePrinciplesOfStatePolicyChapterNotes",
         classNotes: "",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceFundamentalRightsDutiesAndDirectivePrinciplesOfStatePolicyPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceFundamentalRightsDutiesAndDirectivePrinciplesOfStatePolicyPracticeQuestions",
       },
     },
     {
       id: "18",
       title: "The Union Government: The Legislature",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislatureChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislatureClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislatureChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislatureClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislaturePracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislaturePracticeQuestions",
       },
     },
     {
       id: "19",
       title: "The Union Government: The Executive",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutiveChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutiveClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutiveChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutiveClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutivePracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutivePracticeQuestions",
       },
     },
     {
       id: "20",
       title: "The Union Government: The Judiciary",
       links: {
-        chapterNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryChapterNotes",
-        classNotes:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryClassNotes",
+        chapterNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryChapterNotes",
+        classNotes:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryPracticeQuestions",
       },
     },
     {
       id: "21",
       title: "Social Justice and the Marginalised",
       links: {
-        chapterNotes:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedChapterNotes",
-        classNotes:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedClassNotes",
+        chapterNotes:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedChapterNotes",
+        classNotes:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedPracticeQuestions",
       },
     },
     {
       id: "22",
       title: "Safeguarding the Marginalised",
       links: {
-        chapterNotes:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedChapterNotes",
-        classNotes:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedClassNotes",
+        chapterNotes:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedChapterNotes",
+        classNotes:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedClassNotes",
         mindMap: "",
-        practiceQuestions:
-          "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedPracticeQuestions",
+        practiceQuestions:"",
+          // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedPracticeQuestions",
       },
     },
   ];
@@ -469,7 +471,7 @@ const App = () => {
             </button>
             {/* Action buttons */}
             {openChapter === chapter.id && (
-              <div className="p-4 sm:p-5 border-t border-orange-100 bg-orange-50 animate-fade-in">
+              <div className="p-3 sm:p-5 border-t border-orange-100 bg-orange-50 animate-fade-in">
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   <ActionButton
                     label="Chapter Notes"
@@ -477,6 +479,7 @@ const App = () => {
                       navigateTo(chapter.links.chapterNotes, chapter)
                     }
                     hasContent={!!chapter.links.chapterNotes}
+                    animationData={ChapterNotesAnim}
                   />
                   <ActionButton
                     label="Class Notes"
@@ -484,11 +487,13 @@ const App = () => {
                       navigateTo(chapter.links.classNotes, chapter)
                     }
                     hasContent={!!chapter.links.classNotes}
+                    animationData={ClassNotesAnim}
                   />
                   <ActionButton
                     label="Mind Map"
                     onClick={() => navigateTo(chapter.links.mindMap, chapter)}
                     hasContent={!!chapter.links.mindMap}
+                    animationData={MindMapAnim}
                   />
                   <ActionButton
                     label="Practice Questions"
@@ -496,6 +501,7 @@ const App = () => {
                       navigateTo(chapter.links.practiceQuestions, chapter)
                     }
                     hasContent={!!chapter.links.practiceQuestions}
+                    animationData={PrevYearAnim}
                   />
                 </div>
               </div>
@@ -521,14 +527,24 @@ const App = () => {
       {/* Header */}
       <header className="relative isolate overflow-hidden rounded-3xl mb-10">
         <div className="absolute inset-0 -z-20 bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400 opacity-90"></div>
+        <svg className="absolute inset-0 -z-10 w-full h-full opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="3" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
         <div className="relative p-8 sm:p-12 text-center text-white">
           <h1 className="text-3xl sm:text-5xl font-extrabold drop-shadow-lg">
-            Social Science <span className="whitespace-nowrap">Class 8</span>
+            <span className="block sm:inline">Social Science</span>
+            <span className="block sm:inline whitespace-nowrap"> Class 8 CBSE</span>
           </h1>
-          <p className="mt-1 text-md sm:text-lg italic text-orange-100">
-            Study material from Vardaan Learning Institute.
-          </p>
+          <p className="mt-1 text-md sm:text-lg italic text-orange-100">Study material by Ankit Bhaiya.</p>
         </div>
+        <svg className="absolute bottom-0 left-0 w-full h-12 text-white" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,224L48,229.3C96,235,192,245,288,234.7C384,224,480,192,576,192C672,192,768,224,864,213.3C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+        </svg>
       </header>
 
       {/* Button tabs for switching views */}

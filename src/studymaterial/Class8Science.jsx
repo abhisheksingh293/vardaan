@@ -331,14 +331,24 @@ const App = () => {
       {/* Header */}
       <header className="relative isolate overflow-hidden rounded-3xl mb-10">
         <div className="absolute inset-0 -z-20 bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400 opacity-90"></div>
+        <svg className="absolute inset-0 -z-10 w-full h-full opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="3" fill="white" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
         <div className="relative p-8 sm:p-12 text-center text-white">
           <h1 className="text-3xl sm:text-5xl font-extrabold drop-shadow-lg">
-            Social Science <span className="whitespace-nowrap">Class 8</span>
+            <span className="block sm:inline">Science</span>
+            <span className="block sm:inline whitespace-nowrap"> Class 8 CBSE</span>
           </h1>
-          <p className="mt-1 text-md sm:text-lg italic text-orange-100">
-            Study material from Vardaan Learning Institute.
-          </p>
+          <p className="mt-1 text-md sm:text-lg italic text-orange-100">Study material by Ankit Bhaiya.</p>
         </div>
+        <svg className="absolute bottom-0 left-0 w-full h-12 text-white" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="currentColor" d="M0,224L48,229.3C96,235,192,245,288,234.7C384,224,480,192,576,192C672,192,768,224,864,213.3C960,203,1056,149,1152,122.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+        </svg>
       </header>
 
       {/* Button tabs for switching views */}
