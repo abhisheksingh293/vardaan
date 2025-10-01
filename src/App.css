@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); */
 
 @media (max-width: 768px) {
   .hide-on-mobile {
@@ -27,9 +27,9 @@ body {
   overflow-x: hidden;
 }
 
-.font-poppins {
+/* .font-poppins {
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
-}
+} */
 
 .filter-orange-logo {
   filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%) hue-rotate(-20deg) brightness(1.1);
@@ -38,7 +38,7 @@ body {
 
 .navbar-attractive-text {
   letter-spacing: 0.04em;
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  /* font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; */
   text-shadow: 0 2px 8px #ff9800, 0 1px 2px #bbb;
 }
 
@@ -320,9 +320,9 @@ body {
 }
 
 @layer base {
-  html, body, * {
+  /* html, body, * {
     font-family: 'Poppins', sans-serif !important;
-  }
+  } */
   * {
     @apply border-border outline-ring/50;
   }

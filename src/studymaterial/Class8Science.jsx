@@ -57,26 +57,28 @@ const ChapterContent = ({ chapterTitle, contentType, goBack }) => {
   );
 };
 
-// A reusable button component for the links
-const ActionButton = ({ label, onClick, hasContent }) => {
+import Lottie from 'lottie-react';
+import ChapterNotesAnim from '../assets/Animation JSON/Chapter_Notes.json';
+import ClassNotesAnim from '../assets/Animation JSON/Class_Notes.json';
+import MindMapAnim from '../assets/Animation JSON/Mind_Map.json';
+import PracticeQuestionsAnim from '../assets/Animation JSON/Practice_Questions.json';
+import QuizAnim from '../assets/Animation JSON/Quiz.json';
+import QuizSplashAnim from '../assets/Animation JSON/Quiz Splashscreen.json';
+import SplashScreen from '../components/SplashScreen';
+
+const ActionButton = ({ label, onClick, hasContent, animationData }) => {
   const buttonClass = hasContent
     ? "bg-orange-200 text-orange-800 hover:bg-orange-300"
     : "bg-gray-200 text-gray-500 cursor-not-allowed";
-  const iconClass = hasContent ? "text-orange-800" : "text-gray-400";
   return (
     <button
       onClick={onClick}
       className={`flex flex-col items-center justify-center p-3 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md text-sm sm:text-base font-medium min-h-[100px] ${buttonClass}`}
       disabled={!hasContent}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 50 50"
-        className={`w-8 h-8 mb-1 ${iconClass}`}
-        fill="currentColor"
-      >
-        <path d="M 7 2 L 7 48 L 43 48 L 43 14.59375 L 42.71875 14.28125 L 30.71875 2.28125 L 30.40625 2 Z M 9 4 L 29 4 L 29 16 L 41 16 L 41 46 L 9 46 Z M 31 5.4375 L 39.5625 14 L 31 14 Z M 15 22 L 15 24 L 35 24 L 35 22 Z M 15 28 L 15 30 L 31 30 L 31 28 Z M 15 34 L 15 36 L 35 36 L 35 34 Z"></path>
-      </svg>
+      <div className="w-16 h-16 mb-1 pointer-events-none">
+        {animationData && <Lottie animationData={animationData} loop={true} className="w-12 h-12 mb-1" />}
+      </div>
       {label}
     </button>
   );
@@ -84,6 +86,8 @@ const ActionButton = ({ label, onClick, hasContent }) => {
 
 // The main component, renamed to "App" as per the single-file React app convention.
 const App = () => {
+  const [showSplash, setShowSplash] = useState(false);
+  const [pendingQuizNav, setPendingQuizNav] = useState(null);
   // State for managing which chapter is open
   const [openChapter, setOpenChapter] = useState(null);
   // State for managing the current view/page within the single file
@@ -98,17 +102,32 @@ const App = () => {
   };
 
   // Updated navigation: Use router navigation for valid links
-  const navigateTo = (link, chapter) => {
+  const navigateTo = (link, chapter, isQuiz = false) => {
+    if (isQuiz) {
+      setShowSplash(true);
+      setPendingQuizNav({ link, chapter });
+      return;
+    }
     if (!link) {
-      // Handle unavailable links with a specific view
       setSelectedChapter(chapter);
       setSelectedContentType("mindMap");
       setCurrentView("content");
       return;
     }
-    // Use React Router navigation
     navigate(link);
   };
+
+  // Handle splash finish for quiz
+  React.useEffect(() => {
+    if (showSplash && pendingQuizNav) {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+        navigate(pendingQuizNav.link);
+        setPendingQuizNav(null);
+      }, 1200);
+      return () => clearTimeout(timer);
+    }
+  }, [showSplash, pendingQuizNav, navigate]);
 
   const chapters = [
     {
@@ -287,6 +306,7 @@ const App = () => {
                       navigateTo(chapter.links.chapterNotes, chapter)
                     }
                     hasContent={!!chapter.links.chapterNotes}
+                    animationData={ChapterNotesAnim}
                   />
                   <ActionButton
                     label="Class Notes"
@@ -294,11 +314,13 @@ const App = () => {
                       navigateTo(chapter.links.classNotes, chapter)
                     }
                     hasContent={!!chapter.links.classNotes}
+                    animationData={ClassNotesAnim}
                   />
                   <ActionButton
                     label="Mind Map"
                     onClick={() => navigateTo(chapter.links.mindMap, chapter)}
                     hasContent={!!chapter.links.mindMap}
+                    animationData={MindMapAnim}
                   />
                   <ActionButton
                     label="Practice Questions"
@@ -306,6 +328,15 @@ const App = () => {
                       navigateTo(chapter.links.practiceQuestions, chapter)
                     }
                     hasContent={!!chapter.links.practiceQuestions}
+                    animationData={PracticeQuestionsAnim}
+                  />
+                  <ActionButton
+                    label="Quiz"
+                    onClick={() =>
+                      navigateTo(chapter.links.quiz, chapter, true)
+                    }
+                    hasContent={!!chapter.links.quiz}
+                    animationData={QuizAnim}
                   />
                 </div>
               </div>
@@ -327,7 +358,13 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 px-4 sm:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 font-inter text-gray-800">
+    <>
+      <SplashScreen
+        visible={showSplash}
+        message="Loading Quiz..."
+        animation={<Lottie animationData={QuizSplashAnim} loop={true} style={{ width: 200, height: 200 }} />}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 px-4 sm:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 font-inter text-gray-800">
       {/* Header */}
       <header className="relative isolate overflow-hidden rounded-3xl mb-10">
         <div className="absolute inset-0 -z-20 bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400 opacity-90"></div>
@@ -353,31 +390,59 @@ const App = () => {
 
       {/* Button tabs for switching views */}
       <div
-        className="relative max-w-sm mx-auto flex items-center justify-center rounded-full p-1 mb-6"
         style={{
-          height: "40px",
-          backgroundColor: "rgba(0, 0, 0, 0.05)",
+          position: 'relative',
+          maxWidth: 380,
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 9999,
+          padding: 4,
+          marginBottom: 24,
+          height: 40,
+          background: 'rgba(0, 0, 0, 0.05)',
           zIndex: 1,
         }}
       >
-        <div className="flex w-full h-full relative z-10">
+        <div style={{ display: 'flex', width: '100%', height: '100%', position: 'relative', zIndex: 10 }}>
           <button
-            onClick={() => setCurrentView("chapters")}
-            className={`w-1/2 text-center font-semibold text-sm cursor-pointer rounded-full transition-colors duration-200 ${
-              currentView === "chapters"
-                ? "bg-white text-orange-600 shadow"
-                : "text-gray-500"
-            }`}
+            onClick={() => setCurrentView('chapters')}
+            style={{
+              flex: 1,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              cursor: 'pointer',
+              borderRadius: 9999,
+              transition: 'all 0.2s',
+              background: currentView === 'chapters' ? '#fff' : 'transparent',
+              color: currentView === 'chapters' ? '#ea580c' : '#6b7280',
+              boxShadow: currentView === 'chapters' ? '0 2px 8px rgba(234,88,12,0.08)' : 'none',
+              border: 'none',
+              outline: 'none',
+              marginRight: 2,
+            }}
           >
             Chapter
           </button>
           <button
-            onClick={() => setCurrentView("seeMore")}
-            className={`w-1/2 text-center font-semibold text-sm cursor-pointer rounded-full transition-colors duration-200 ${
-              currentView === "seeMore"
-                ? "bg-white text-orange-600 shadow"
-                : "text-gray-500"
-            }`}
+            onClick={() => setCurrentView('seeMore')}
+            style={{
+              flex: 1,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              cursor: 'pointer',
+              borderRadius: 9999,
+              transition: 'all 0.2s',
+              background: currentView === 'seeMore' ? '#fff' : 'transparent',
+              color: currentView === 'seeMore' ? '#ea580c' : '#6b7280',
+              boxShadow: currentView === 'seeMore' ? '0 2px 8px rgba(234,88,12,0.08)' : 'none',
+              border: 'none',
+              outline: 'none',
+              marginLeft: 2,
+            }}
           >
             See More
           </button>
@@ -388,6 +453,7 @@ const App = () => {
       {currentView === "chapters" && renderChapters(chapters)}
       {currentView === "seeMore" && renderChapters(seeMoreContent)}
     </div>
+  </>
   );
 };
 

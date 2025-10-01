@@ -62,6 +62,8 @@ import ChapterNotesAnim from '../assets/Animation JSON/Chapter_Notes.json';
 import ClassNotesAnim from '../assets/Animation JSON/Class_Notes.json';
 import MindMapAnim from '../assets/Animation JSON/Mind_Map.json';
 import QuizAnim from '../assets/Animation JSON/Quiz.json';
+import QuizSplashAnim from '../assets/Animation JSON/Quiz Splashscreen.json';
+import SplashScreen from '../components/SplashScreen';
 import PrevYearAnim from '../assets/Animation JSON/Previous_year_Questions.json';
 import NcertPdfAnim from '../assets/Animation JSON/NCERT PDF.json';
 import NcertSolutionAnim from '../assets/Animation JSON/Ncert_Solution.json';
@@ -86,6 +88,8 @@ const ActionButton = ({ label, onClick, hasContent, animationData }) => {
 
 // The main component, renamed to "App" as per the single-file React app convention.
 const App = () => {
+  const [showSplash, setShowSplash] = useState(false);
+  const [pendingQuizNav, setPendingQuizNav] = useState(null);
   // State for managing which chapter is open
   const [openChapter, setOpenChapter] = useState(null);
   // State for managing the current view/page within the single file
@@ -100,17 +104,31 @@ const App = () => {
   };
 
   // Updated navigation: Use router navigation for valid links
-  const navigateTo = (link, chapter) => {
+  const navigateTo = (link, chapter, isQuiz = false) => {
+    if (isQuiz) {
+      setShowSplash(true);
+      setPendingQuizNav({ link, chapter });
+      return;
+    }
     if (!link) {
-      // Handle unavailable links with a specific view
       setSelectedChapter(chapter);
       setSelectedContentType("mindMap");
       setCurrentView("content");
       return;
     }
-    // Use React Router navigation
     navigate(link);
   };
+
+  React.useEffect(() => {
+    if (showSplash && pendingQuizNav) {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+        navigate(pendingQuizNav.link);
+        setPendingQuizNav(null);
+      }, 1200);
+      return () => clearTimeout(timer);
+    }
+  }, [showSplash, pendingQuizNav, navigate]);
 
   // ✅ All chapter links stored in one place
   const chapters = [
@@ -119,6 +137,7 @@ const App = () => {
       id: "01",
       title: "Resources: Utilisation and Development",
       links: {
+        quiz: '/',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceResourcesUtilisationAndDevelopmentChapterNotes",
         classNotes: "",
@@ -132,6 +151,7 @@ const App = () => {
       id: "02",
       title: "Natural Resources: Land, Soil and Water",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesLandSoilAndWaterChapterNotes",
         classNotes: "",
@@ -145,6 +165,7 @@ const App = () => {
       id: "03",
       title: "Natural Resources: Vegetation and Wildlife",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceNaturalResourcesVegetationAndWildlifeChapterNotes",
         classNotes:"",
@@ -158,6 +179,7 @@ const App = () => {
       id: "04",
       title: "Mineral and Energy Resources",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceMineralAndEnergyResourcesChapterNotes",
         classNotes: "",
@@ -171,6 +193,7 @@ const App = () => {
       id: "05",
       title: "Agriculture",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureChapterNotes",
         classNotes: "",
@@ -184,6 +207,7 @@ const App = () => {
       id: "06",
       title: "Manufacturing Industries",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceManufacturingIndustriesChapterNotes",
         classNotes: "",
@@ -197,6 +221,7 @@ const App = () => {
       id: "07",
       title: "Human Resources",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceHumanResourcesChapterNotes",
         classNotes: "",
@@ -211,6 +236,7 @@ const App = () => {
       id: "08",
       title: "The Modern Period",
       links: {
+        quiz: '',
         chapterNotes: "",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodChapterNotes",
         classNotes: "",
@@ -224,6 +250,7 @@ const App = () => {
       id: "09",
       title: "Establishment of Company Rule in India",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceEstablishmentOfCompanyRuleInIndiaChapterNotes",
         classNotes:"",
@@ -237,6 +264,7 @@ const App = () => {
       id: "10",
       title: "Colonialism: Rural and Tribal Societies",
       links: {
+        quiz: '',
         chapterNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismRuralAndTribalSocietiesChapterNotes",
         classNotes:
@@ -250,6 +278,7 @@ const App = () => {
       id: "11",
       title: "The First War of Independence—1857",
       links: {
+        quiz: '',
         chapterNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheFirstWarOfIndependence1857ChapterNotes",
         classNotes:
@@ -263,6 +292,7 @@ const App = () => {
       id: "12",
       title: "Impact of British Rule on India",
       links: {
+        quiz: '',
         chapterNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceImpactOfBritishRuleOnIndiaChapterNotes",
         classNotes:
@@ -276,6 +306,7 @@ const App = () => {
       id: "13",
       title: "Colonialism and Urban Change",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceColonialismAndUrbanChangeChapterNotes",
         classNotes:"",
@@ -289,6 +320,7 @@ const App = () => {
       id: "14",
       title: "The Nationalist Movement (1870 to 1947)",
       links: {
+        quiz: '',
         chapterNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheNationalistMovementChapterNotes",
         classNotes:
@@ -302,6 +334,7 @@ const App = () => {
       id: "15",
       title: "India Marches Ahead",
       links: {
+        quiz: '',
         chapterNotes:
           "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceIndiaMarchesAheadChapterNotes",
         classNotes:
@@ -316,6 +349,7 @@ const App = () => {
       id: "16",
       title: "Our Constitution",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceOurConstitutionChapterNotes",
         classNotes:"",
@@ -330,6 +364,7 @@ const App = () => {
       title:
         "Fundamental Rights, Fundamental Duties and Directive Principles of State Policy",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceFundamentalRightsDutiesAndDirectivePrinciplesOfStatePolicyChapterNotes",
         classNotes: "",
@@ -342,6 +377,7 @@ const App = () => {
       id: "18",
       title: "The Union Government: The Legislature",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheLegislatureChapterNotes",
         classNotes:"",
@@ -355,6 +391,7 @@ const App = () => {
       id: "19",
       title: "The Union Government: The Executive",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheExecutiveChapterNotes",
         classNotes:"",
@@ -368,6 +405,7 @@ const App = () => {
       id: "20",
       title: "The Union Government: The Judiciary",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheUnionGovernmentTheJudiciaryChapterNotes",
         classNotes:"",
@@ -381,6 +419,7 @@ const App = () => {
       id: "21",
       title: "Social Justice and the Marginalised",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedChapterNotes",
         classNotes:"",
@@ -394,6 +433,7 @@ const App = () => {
       id: "22",
       title: "Safeguarding the Marginalised",
       links: {
+        quiz: '',
         chapterNotes:"",
           // "/studymmaterial/class8/Class8SocialScience/Class8cbseSocialScienceSafeguardingTheMarginalisedChapterNotes",
         classNotes:"",
@@ -410,6 +450,7 @@ const App = () => {
       id: "S1",
       title: "History: Key Dates & Events",
       links: {
+        quiz: '',
         notes: "",
       },
     },
@@ -417,6 +458,7 @@ const App = () => {
       id: "S2",
       title: "Geography: Map-based Questions",
       links: {
+        quiz: '',
         notes: "",
       },
     },
@@ -424,6 +466,7 @@ const App = () => {
       id: "S3",
       title: "Civics: Important Amendments",
       links: {
+        quiz: '',
         notes: "",
       },
     },
@@ -503,6 +546,14 @@ const App = () => {
                     hasContent={!!chapter.links.practiceQuestions}
                     animationData={PrevYearAnim}
                   />
+                  <ActionButton
+                    label="Quiz"
+                    onClick={() =>
+                      navigateTo(chapter.links.quiz, chapter, true)
+                    }
+                    hasContent={!!chapter.links.quiz}
+                    animationData={QuizAnim}
+                  />
                 </div>
               </div>
             )}
@@ -523,7 +574,13 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 px-4 sm:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 font-inter text-gray-800">
+    <>
+      <SplashScreen
+        visible={showSplash}
+        message="Loading Quiz..."
+        animation={<Lottie animationData={QuizSplashAnim} loop={true} style={{ width: 800, height: 800 }} />}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 px-4 sm:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 font-inter text-gray-800">
       {/* Header */}
       <header className="relative isolate overflow-hidden rounded-3xl mb-10">
         <div className="absolute inset-0 -z-20 bg-gradient-to-br from-orange-600 via-orange-500 to-yellow-400 opacity-90"></div>
@@ -549,31 +606,59 @@ const App = () => {
 
       {/* Button tabs for switching views */}
       <div
-        className="relative max-w-sm mx-auto flex items-center justify-center rounded-full p-1 mb-6"
         style={{
-          height: "40px",
-          backgroundColor: "rgba(0, 0, 0, 0.05)",
+          position: 'relative',
+          maxWidth: 380,
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 9999,
+          padding: 4,
+          marginBottom: 24,
+          height: 40,
+          background: 'rgba(0, 0, 0, 0.05)',
           zIndex: 1,
         }}
       >
-        <div className="flex w-full h-full relative z-10">
+        <div style={{ display: 'flex', width: '100%', height: '100%', position: 'relative', zIndex: 10 }}>
           <button
-            onClick={() => setCurrentView("chapters")}
-            className={`w-1/2 text-center font-semibold text-sm cursor-pointer rounded-full transition-colors duration-200 ${
-              currentView === "chapters"
-                ? "bg-white text-orange-600 shadow"
-                : "text-gray-500"
-            }`}
+            onClick={() => setCurrentView('chapters')}
+            style={{
+              flex: 1,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              cursor: 'pointer',
+              borderRadius: 9999,
+              transition: 'all 0.2s',
+              background: currentView === 'chapters' ? '#fff' : 'transparent',
+              color: currentView === 'chapters' ? '#ea580c' : '#6b7280',
+              boxShadow: currentView === 'chapters' ? '0 2px 8px rgba(234,88,12,0.08)' : 'none',
+              border: 'none',
+              outline: 'none',
+              marginRight: 2,
+            }}
           >
             Chapter
           </button>
           <button
-            onClick={() => setCurrentView("seeMore")}
-            className={`w-1/2 text-center font-semibold text-sm cursor-pointer rounded-full transition-colors duration-200 ${
-              currentView === "seeMore"
-                ? "bg-white text-orange-600 shadow"
-                : "text-gray-500"
-            }`}
+            onClick={() => setCurrentView('seeMore')}
+            style={{
+              flex: 1,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              cursor: 'pointer',
+              borderRadius: 9999,
+              transition: 'all 0.2s',
+              background: currentView === 'seeMore' ? '#fff' : 'transparent',
+              color: currentView === 'seeMore' ? '#ea580c' : '#6b7280',
+              boxShadow: currentView === 'seeMore' ? '0 2px 8px rgba(234,88,12,0.08)' : 'none',
+              border: 'none',
+              outline: 'none',
+              marginLeft: 2,
+            }}
           >
             See More
           </button>
@@ -584,6 +669,7 @@ const App = () => {
       {currentView === "chapters" && renderChapters(chapters)}
       {currentView === "seeMore" && renderChapters(seeMoreContent)}
     </div>
+  </>
   );
 };
 

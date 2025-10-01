@@ -7,7 +7,7 @@ const Class8 = () => {
   const handleMathematicsClick = () => navigate('/studymaterial/class8/Class8Mathematics');
   const handleSocialScienceClick = () => navigate('/studymaterial/class8/Class8SocialScience');
   const handleEnglishClick = () => navigate('/studymaterial/class8/Class8English');
-  const handleEnglishGrammarClick = () => navigate('/studymaterial/class8/Class8EnglishGrammar');
+  const handleExtraResourcesClick = () => navigate('/studymaterial/class8/Class8EnglishGrammar');
 
   return (
     <div className="mt-17 min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 p-4 sm:p-6 font-inter text-gray-800">
@@ -71,7 +71,10 @@ const Class8 = () => {
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363608/English_Language_x7iejs.png" alt="English Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Class 8</h3>
           </button>
-          <button onClick={handleEnglishGrammarClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+
+
+
+          <button onClick={handleExtraResourcesClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1757013643/extra_resources_gl2vba.jpg" alt="Social Science Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Extra Resources</h3>
           </button>

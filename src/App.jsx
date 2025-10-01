@@ -1,4 +1,5 @@
 import React from 'react';
+import './studymaterial/fonts.css';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useParams, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes from './studymaterial/Class9CivicsWhatIsDemocracyWhyDemocracyClassNotes.jsx';
@@ -97,6 +98,21 @@ import Class6SocialScience from './studymaterial/Class6SocialScience.jsx';
 import Class6English from './studymaterial/Class6English.jsx';
 import Class6EnglishGrammar from './studymaterial/Class6EnglishGrammar.jsx';
 import Class7 from './studymaterial/Class7.jsx';
+import Class9icseEnglishAct2Scene1 from './studymaterial/Class9icseEnglishAct2Scene1.jsx';
+import Class9icseEnglishAct2Scene2 from './studymaterial/Class9icseEnglishAct2Scene2.jsx';
+import Class9icseEnglishAct2Scene3 from './studymaterial/Class9icseEnglishAct2Scene3.jsx';
+import Class9icseEnglishAct2Scene4 from './studymaterial/Class9icseEnglishAct2Scene4.jsx';
+import Class9icseEnglishAct3Scene1 from './studymaterial/Class9icseEnglishAct3Scene1.jsx';
+import Class9icseEnglishAct3Scene2 from './studymaterial/Class9icseEnglishAct3Scene2.jsx';
+import Class9icseEnglishAct3Scene3 from './studymaterial/Class9icseEnglishAct3Scene3.jsx';
+import Class9icseEnglishAct4Scene1 from './studymaterial/Class9icseEnglishAct4Scene1.jsx';
+import Class9icseEnglishAct4Scene2 from './studymaterial/Class9icseEnglishAct4Scene2.jsx';
+import Class9icseEnglishAct4Scene3 from './studymaterial/Class9icseEnglishAct4Scene3.jsx';
+import Class9icseEnglishAct5Scene1 from './studymaterial/Class9icseEnglishAct5Scene1.jsx';
+import Class9icseEnglishAct5Scene2 from './studymaterial/Class9icseEnglishAct5Scene2.jsx';
+import Class9icseEnglishAct5Scene3 from './studymaterial/Class9icseEnglishAct5Scene3.jsx';
+import Class9icseEnglishAct5Scene4 from './studymaterial/Class9icseEnglishAct5Scene4.jsx';
+import Class9icseEnglishAct5Scene5 from './studymaterial/Class9icseEnglishAct5Scene5.jsx';
 import Class8 from './studymaterial/Class8.jsx';
 import Class7Science from './studymaterial/Class7Science.jsx';
 import Class7Mathematics from './studymaterial/Class7Mathematics.jsx';
@@ -332,6 +348,9 @@ import Class9icseScience from './studymaterial/Class9icseScience.jsx';
 import Class9icseMathematics from './studymaterial/Class9icseMathematics.jsx';
 import Class9icseSocialScience from './studymaterial/Class9icseSocialScience.jsx';
 import Class9icseEnglish from './studymaterial/Class9icseEnglish.jsx';
+import Class9icseEnglishAct1Scene1 from './studymaterial/Class9icseEnglishAct1Scene1.jsx';
+import Class9icseEnglishAct1Scene2 from './studymaterial/Class9icseEnglishAct1Scene2.jsx';
+import Class9icseEnglishAct1Scene3 from './studymaterial/Class9icseEnglishAct1Scene3.jsx';
 import Class9icseEnglishGrammar from './studymaterial/Class9icseEnglishGrammar.jsx';
 import Class11 from './studymaterial/Class11.jsx';
 import Class11Science from './studymaterial/Class11Science.jsx';
@@ -451,7 +470,6 @@ import Class10cbsecivicsHalfYearlyExamination2025_26 from './studymaterial/Class
 
 import UpcomingNotes from './components/UpcomingNotes';
 import Class10sstHalfyearly2025ImportantQuestions from './studymaterial/Class10sstHalfyearly2025ImportantQuestions.jsx';
-
 
 
 
@@ -637,10 +655,28 @@ function App() {
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceSocialJusticeAndTheMarginalisedClassNotes" element={<Class8cbseSocialScienceSocialJusticeAndTheMarginalisedClassNotes />} />
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodChapterNotes" element={<Class8cbseSocialScienceTheModernPeriodChapterNotes />} />
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceTheModernPeriodClassNotes" element={<Class8cbseSocialScienceTheModernPeriodClassNotes />} />
-      
+          <Route path="/studymaterial/class9icseEnglish/act1/scene1" element={<Class9icseEnglishAct1Scene1 />} />
+<Route path="/studymaterial/class9icseEnglish/act1/scene2" element={<Class9icseEnglishAct1Scene2 />} />
+<Route path="/studymaterial/class9icseEnglish/act1/scene3" element={<Class9icseEnglishAct1Scene3 />} />
+<Route path="/studymaterial/class9icseEnglish/act2/scene1" element={<Class9icseEnglishAct2Scene1 />} />
+<Route path="/studymaterial/class9icseEnglish/act2/scene2" element={<Class9icseEnglishAct2Scene2 />} />
+<Route path="/studymaterial/class9icseEnglish/act2/scene3" element={<Class9icseEnglishAct2Scene3 />} />
+<Route path="/studymaterial/class9icseEnglish/act2/scene4" element={<Class9icseEnglishAct2Scene4 />} />
+<Route path="/studymaterial/class9icseEnglish/act3/scene1" element={<Class9icseEnglishAct3Scene1 />} />
+<Route path="/studymaterial/class9icseEnglish/act3/scene2" element={<Class9icseEnglishAct3Scene2 />} />
+<Route path="/studymaterial/class9icseEnglish/act3/scene3" element={<Class9icseEnglishAct3Scene3 />} />
+<Route path="/studymaterial/class9icseEnglish/act4/scene1" element={<Class9icseEnglishAct4Scene1 />} />
+<Route path="/studymaterial/class9icseEnglish/act4/scene2" element={<Class9icseEnglishAct4Scene2 />} />
+<Route path="/studymaterial/class9icseEnglish/act4/scene3" element={<Class9icseEnglishAct4Scene3 />} />
+<Route path="/studymaterial/class9icseEnglish/act5/scene1" element={<Class9icseEnglishAct5Scene1 />} />
+<Route path="/studymaterial/class9icseEnglish/act5/scene2" element={<Class9icseEnglishAct5Scene2 />} />
+<Route path="/studymaterial/class9icseEnglish/act5/scene3" element={<Class9icseEnglishAct5Scene3 />} />
+<Route path="/studymaterial/class9icseEnglish/act5/scene4" element={<Class9icseEnglishAct5Scene4 />} />
+<Route path="/studymaterial/class9icseEnglish/act5/scene5" element={<Class9icseEnglishAct5Scene5 />} />
+
+
+
 <Route path="/studymaterial/class10/Class10Science/Class10ScienceElectricityPreviousYearQuestion" element={<Class10ScienceElectricityPreviousYearQuestion />} />
-
-
           <Route path="/studymaterial/class8/Class8English" element={<Class8English />} />
           <Route path="/studymaterial/class8/Class8EnglishGrammar" element={<Class8EnglishGrammar />} />
           <Route path="/studymaterial/class7icse" element={<Class7icse />} />
@@ -975,6 +1011,8 @@ function App() {
 <Route path="/studymaterial/class9icse/Class9icseMathematics" element={<Class9icseMathematics />} />
 <Route path="/studymaterial/class9icse/Class9icseSocialScience" element={<Class9icseSocialScience />} />
 <Route path="/studymaterial/class9icse/Class9icseEnglish" element={<Class9icseEnglish />} />
+<Route path="/Englishicse" element={<Class9icseEnglish />} />
+
 <Route path="/studymaterial/class9icse/Class9icseEnglishGrammar" element={<Class9icseEnglishGrammar />} />
 <Route path="/studymaterial/class10icse" element={<Class10icse />} />
 <Route path="/studymaterial/class10icse/Class10icseScience" element={<Class10icseScience />} />
