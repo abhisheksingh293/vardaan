@@ -63,6 +63,7 @@ import TopResults from './components/TopResults';
 import ResultCheck from './pages/ResultCheck.jsx';
 import RegisterStudent from './pages/RegisterStudent.jsx';
 import TestResults from './components/TestResults.jsx';
+import ResultPage from './pages/ResultPage.jsx';
 const NcertPdf = React.lazy(() => import('./pages/NcertPdf.jsx'));
 const NcertNotes = React.lazy(() => import('./pages/NcertNotes.jsx'));
 const ReferenceBook = React.lazy(() => import('./pages/ReferenceBook.jsx'));
@@ -458,7 +459,7 @@ import GlobalisationAndTheIndianEconomyChapter from './studymaterial/Class10Econ
 import MoneyAndCreditChapter from './studymaterial/Class10EconomicsMoneyAndCreditClassNotes.jsx';
 import ConsumerRightsChapter from './studymaterial/Class10EconomicsConsumerRightsClassNotes.jsx';
 
-import Results from './components/Results.jsx';
+import TestResultsPage from './components/Results.jsx';
 import HallOfFame from './components/HallOfFame.jsx';
 
 import Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes from './studymaterial/Class8cbseSocialScienceTheNationalistMovement1870To1947ClassNotes.jsx';
@@ -560,13 +561,14 @@ function App() {
           <Route Path="/Map" element={<Map />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="/blog" element={<BlogsListPage />} />
+                    <Route path="/result/:testName" element={<ResultPage />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
 <Route path="/hall-of-fame" element={<HallOfFame />} />
           <Route path="/testresults" element={<TestResults />} />
           <Route path="/top-results" element={<TopResults />} />
           <Route path="/resultcheck" element={<ResultCheck />} />
           <Route path="/register" element={<RegisterStudent />} />
-          <Route path="/results" element={<Results />} />
+          <Route path="/results" element={<TestResultsPage />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />

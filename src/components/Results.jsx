@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // --- Processed Mock Data ---
 // This function replaces "Arihant" with "Not found" in the dataset.
@@ -14,7 +15,36 @@ const processData = (data) => {
     }));
 };
 
-const initialTestData = [
+export const initialTestData = [
+
+{
+        name: "Minor Test 17",
+        results: [
+            { id: 1, studentName: "Advik Kumar Jha (Class 7 ICSE)", score: "92.5%", rank: 1 },
+            { id: 2, studentName: "Aradhya Ranjan (Class 8 CBSE)", score: "82.5%", rank: 2 },
+            { id: 3, studentName: "Saurya (Class 11)", score: "75.0%", rank: 3 },
+            { id: 4, studentName: "Aditi (Class 7 ICSE)", score: "72.5%", rank: 4 },
+            { id: 5, studentName: "Parul Neha Nayak (Class 10 CBSE)", score: "67.5%", rank: 5 },
+            { id: 6, studentName: "Arnav Pathak (Class 10 CBSE)", score: "66.3%", rank: 6 },
+            { id: 7, studentName: "Ananya Dubey (Class 10 CBSE)", score: "65.0%", rank: 7 },
+            { id: 8, studentName: "Ananya (Class 11)", score: "65.0%", rank: 7 },
+            { id: 9, studentName: "Yoganshika (Class 10 CBSE)", score: "61.3%", rank: 9 },
+            { id: 10, studentName: "Mayank Mishra (Class 9 ICSE)", score: "57.5%", rank: 10 },
+            { id: 11, studentName: "Naitik (Class 10 CBSE)", score: "56.3%", rank: 11 },
+            { id: 12, studentName: "Shivam Bharti (Class 7 CBSE)", score: "55.0%", rank: 12 },
+            { id: 13, studentName: "Piyush (Class 12)", score: "51.9%", rank: 13 },
+            { id: 14, studentName: "Tanvi Bharti (Class 10 CBSE)", score: "51.3%", rank: 14 },
+            { id: 15, studentName: "Rudransh Sharma (Class 6 ICSE)", score: "40.0%", rank: 15 },
+            { id: 16, studentName: "Porshiya Bhowmik (Class 6 ICSE)", score: "32.5%", rank: 16 },
+            { id: 17, studentName: "Arpit Kumar Singh (Class 7 CBSE)", score: "30.0%", rank: 17 },
+            { id: 18, studentName: "Akshita Lal (Class 10 ICSE)", score: "25.0%", rank: 18 },
+            { id: 19, studentName: "Sripad Nayak (Class 9 CBSE)", score: "23.0%", rank: 19 },
+            { id: 20, studentName: "Arnav Mishra (Class 7 CBSE)", score: "10.0%", rank: 20 }
+           ]
+      },
+      
+
+   
 
 
     {
@@ -308,7 +338,7 @@ const SilverMedalIcon = () => (
 
 // --- Individual Components ---
 
-const TestSelectionButton = ({ test, onClick, delay }) => {
+const TestSelectionButton = ({ test, delay }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const baseStyle = {
@@ -333,9 +363,9 @@ const TestSelectionButton = ({ test, onClick, delay }) => {
     };
 
     return (
-        <button
-            onClick={() => onClick(test)}
-            style={{ ...baseStyle, ...(isHovered ? hoverStyle : {}) }}
+                <Link
+            to={`/result/${test.name.toLowerCase().replace(/\s+/g, '')}`}
+            style={{ ...baseStyle, textDecoration: 'none', ...(isHovered ? hoverStyle : {}) }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -343,12 +373,12 @@ const TestSelectionButton = ({ test, onClick, delay }) => {
                 <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{test.name}</h2>
                 <span style={{ color: '#FBBF24', transform: isHovered ? 'translateX(0.25rem)' : 'translateX(0)', transition: 'transform 0.3s' }}>&#8594;</span>
             </div>
-        </button>
+        </Link>
     );
 };
 
 
-const TestSelection = ({ tests, onSelectTest }) => (
+const TestSelection = ({ tests }) => (
     <div style={{ width: '100%', maxWidth: '48rem', margin: '0 auto', textAlign: 'center', animation: 'fade-in-up 0.6s ease-out forwards' }}>
         <p style={{ color: '#FCD34D', fontSize: '1.125rem', marginBottom: '0.5rem' }}>(Vardaan Senior)</p>
         <h1 
@@ -383,8 +413,7 @@ const TestSelection = ({ tests, onSelectTest }) => (
                 <TestSelectionButton
                     key={test.name}
                     test={test}
-                    onClick={onSelectTest}
-                    delay={index * 100}
+                                        delay={index * 100}
                 />
             ))}
         </div>
@@ -551,17 +580,8 @@ const ResultDisplay = ({ test, onBack }) => {
 
 
 // --- Main App Component ---
-export default function App() {
-    const [selectedTest, setSelectedTest] = useState(null);
-
-    const handleSelectTest = (test) => {
-        setSelectedTest(test);
-    };
-
-    const handleBack = () => {
-        setSelectedTest(null);
-    };
-
+export default function Results() {
+    
     const styles = {
         container: {
             minHeight: '100vh',
@@ -619,12 +639,8 @@ export default function App() {
                 }
             `}</style>
             
-            <main style={styles.mainContent}>
-                {selectedTest ? (
-                    <ResultDisplay test={selectedTest} onBack={handleBack} />
-                ) : (
-                    <TestSelection tests={testData} onSelectTest={handleSelectTest} />
-                )}
+                        <main style={styles.mainContent}>
+                <TestSelection tests={testData} />
             </main>
         </div>
     );
