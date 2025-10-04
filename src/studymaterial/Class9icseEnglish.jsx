@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const styles = {
   body: {
@@ -1464,13 +1464,17 @@ export default function JuliusCaesarGuide() {
   }, []);
 
   return (
-    <div style={styles.body}>
+    <div style={{...styles.body, overflowX: 'hidden'}}>
       <style>{`
               .large-screen-characters {
                   display: block;
               }
               .small-screen-characters {
                   display: none;
+              }
+
+              body {
+                  overflow-x: hidden !important;
               }
 
               @media (max-width: 768px) {

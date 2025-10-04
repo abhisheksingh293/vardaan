@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vardaan Learning Platform">
+  <!-- Preload LCP Vardaan Junior Illustration for faster LCP -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363357/Junior_c8yrv6.png" />
+  <!-- Preconnect to critical origins for performance -->
+  <link rel="preconnect" href="https://yfxhswegzytlpjchmtsj.supabase.co" crossorigin>
+  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+  <link rel="preconnect" href="https://www.shutterstock.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Defer Google Fonts loading; 'font-display: swap' is enabled for CLS optimization -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+    </noscript>
+    <!-- Inline critical CSS placeholder (replace with real critical CSS) -->
+    <style>
+      /* Example: body { background: #fff; } */
+    </style>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="preconnect" href="https://yfxhswegzytlpjchmtsj.supabase.co" crossorigin />
+    <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+    <link rel="preconnect" href="https://cdn-icons-png.flaticon.com" crossorigin />
+    <link rel="preconnect" href="https://www.shutterstock.com" crossorigin />
+    <link rel="preconnect" href="https://api.dicebear.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vardaan Learning Institute</title>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -12,17 +40,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Vardaan" />
     <link rel="manifest" href="/site.webmanifest" />
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YGZ51QFSJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7YGZ51QFSJ');
-    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="/js/analytics.js"></script>
   </body>
 </html>

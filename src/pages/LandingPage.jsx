@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel";
-import supabase from "../supabaseClient";
 import JuniorMentorSlider from "../components/JuniorMentorSlider";
 import StudentsLoveSection from "../components/StudentsLoveSection";
 import TestimonialSection from "../components/TestimonialSection";
@@ -12,112 +11,10 @@ import HallOfFame from "../components/HallOfFame";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const [topResults, setTopResults] = useState([]);
-  const [loadingTopResults, setLoadingTopResults] = useState(true);
-  const [topResultsError, setTopResultsError] = useState("");
-
-  useEffect(() => {
-    async function fetchTopResults() {
-      setLoadingTopResults(true);
-      setTopResultsError("");
-      try {
-        // Get the latest test with centre_id
-        const { data: latestTests, error: latestError } = await supabase
-          .from("test_results")
-          .select("test_id, test_name, test_date, centre_id")
-          .order("test_date", { ascending: false })
-          .limit(1);
-        const latestTest = latestTests?.[0];
-        if (latestError) throw latestError;
-        if (!latestTest) {
-          setTopResults([]);
-          setLoadingTopResults(false);
-          return;
-        }
-        // Fetch all results for this test
-        const { data: allResults, error: allError } = await supabase
-          .from("test_results")
-          .select(
-            "student_id, subject, full_marks, obtained_marks, percentage, test_name, test_date"
-          )
-          .eq("test_id", latestTest.test_id);
-        if (allError) throw allError;
-        // Calculate combined percentages for each student
-        const studentResults = {};
-        allResults.forEach((result) => {
-          if (!studentResults[result.student_id]) {
-            studentResults[result.student_id] = {
-              subjects: [],
-              total_percentage: 0,
-              subject_count: 0,
-            };
-          }
-          studentResults[result.student_id].subjects.push({
-            subject: result.subject,
-            full_marks: result.full_marks,
-            obtained_marks: result.obtained_marks,
-            percentage: result.percentage,
-          });
-          studentResults[result.student_id].total_percentage += Number(
-            result.percentage
-          );
-          studentResults[result.student_id].subject_count++;
-        });
-        // Calculate combined percentage for each student
-        const combinedResults = Object.entries(studentResults).map(
-          ([studentId, data]) => ({
-            student_id: studentId,
-            subjects: data.subjects,
-            combined_percentage: (
-              data.total_percentage / data.subject_count
-            ).toFixed(2),
-          })
-        );
-        // Sort by combined percentage and take top 3
-        const topResultsRaw = combinedResults
-          .sort(
-            (a, b) =>
-              parseFloat(b.combined_percentage) -
-              parseFloat(a.combined_percentage)
-          )
-          .slice(0, 3);
-        // Fetch student names
-        const studentIds = topResultsRaw.map((r) => r.student_id);
-        const { data: students, error: studentsError } = await supabase
-          .from("profiles")
-          .select("id, full_name, class, profile_image")
-          .in("id", studentIds);
-        if (studentsError) throw studentsError;
-        const studentMap = {};
-        students.forEach((s) => {
-          studentMap[s.id] = s;
-        });
-        // Format results with rank and combined percentage
-        const formattedResults = topResultsRaw.map((r, idx) => ({
-          student_id: r.student_id,
-          rank: idx + 1,
-          student_name: studentMap[r.student_id]?.full_name || r.student_id,
-          class: studentMap[r.student_id]?.class || "",
-          profile_image: studentMap[r.student_id]?.profile_image || "",
-          combined_percentage: r.combined_percentage,
-          subjects: r.subjects,
-        }));
-        setTopResults(formattedResults);
-      } catch (err) {
-        setTopResultsError(
-          "Failed to fetch top results: " + (err.message || err)
-        );
-      } finally {
-        setLoadingTopResults(false);
-      }
-    }
-    fetchTopResults();
-  }, []);
 
   return (
     <>
-      <div>
-        <section className="section-fit rounded-3xl shadow-lg p-4 md:p-6 relative overflow-hidden">
+      <section className="section-fit rounded-3xl shadow-lg p-4 md:p-6 relative overflow-hidden">
           {/* Chalkboard overlay */}
           <div className="absolute inset-0 w-full h-full z-0 overflow-hidden rounded-3xl">
             <img
@@ -134,7 +31,10 @@ const LandingPage = () => {
               <img
                 src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363110/logo_orange_axqhad.svg"
                 alt="Vardaan Logo"
+                width="208"
+                height="208"
                 className="h-36 w-36 md:h-52 md:w-52 mt-0 hidden md:block"
+                fetchpriority="high"
               />
               <h1 className="text-center text-6xl md:text-6xl font-extrabold text-[#ff4e3c] mb-8 leading-tight hidden md:block">
                 Vardaan Learning Institute
@@ -145,7 +45,10 @@ const LandingPage = () => {
               <img
                 src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363357/Junior_c8yrv6.png"
                 alt="Vardaan Junior Illustration"
+                width="380"
+                height="436"
                 className="block md:hidden mx-auto mb-8 w-full max-w-full px-0 h-auto"
+                fetchpriority="high"
               />
               <div className="flex flex-col md:flex-row gap-8 w-full max-w-lg justify-center mb-12">
                 <button
@@ -175,7 +78,9 @@ const LandingPage = () => {
               <img
                 src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363357/teacher_w9xjz1.png"
                 alt="Ankit Bhaiya Illustration"
-                className="hidden md:block"
+                width="480"
+                height="600"
+                className="hidden md:block md:w-[480px] md:h-[600px]"
               />
             </div>
           </div>
@@ -876,7 +781,6 @@ const LandingPage = () => {
             }}
           />
         </a>
-      </div>
     </>
   );
 };

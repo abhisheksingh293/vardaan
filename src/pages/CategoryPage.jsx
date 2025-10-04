@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SubcategoryDropdownMenuStyled from '../components/SubcategoryDropdownMenuStyled';
-import supabase from '../supabaseClient';
+import supabase from '../../utils/supabase';
 import NotFound from './NotFound';
 import './CategoryPage.css';
 

@@ -30,41 +30,81 @@ const ImageCarousel = () => {
     timeoutRef.current = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, AUTO_SLIDE_INTERVAL);
-    return () => clearTimeout(timeoutRef.current);
   }, [current, slides.length]);
 
   return (
-    <div className="w-full flex flex-col items-center py-5 bg-white px-4 md:px-12">
-      <h3 className="text-4xl md:text-4xl font-extrabold text-[#ff4e3c] mb-8 text-center">What We Offer
-      </h3>
-      <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-2xl shadow-lg" style={{ height: isMobile ? '440px' : undefined, bottom: isMobile ? '16px' : undefined }}>
+    <div className="w-full flex flex-col items-center py-4 md:py-8 bg-white px-2 md:px-4">
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#ff4e3c] mb-6 md:mb-8 text-center">What We Offer</h2>
+      <div className="relative w-full max-w-full mx-auto overflow-hidden">
         <div
-          className="flex transition-transform duration-700 ease-in-out h-full"
+          className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slides.map((src, idx) => (
-            <img
-              key={idx}
-              src={src}
-              alt={`Slide ${idx + 1}`}
-              className="w-full h-full object-cover flex-shrink-0"
-              style={{ minWidth: '100%', height: isMobile ? '440px' : '100%' }}
-            />
+            <div 
+              key={idx} 
+              className="w-full h-full flex-shrink-0 flex justify-center items-center p-2 md:p-4"
+            >
+              <div className="relative w-full h-full flex justify-center items-center">
+                <div className="w-full h-full flex items-center justify-center">
+                  <img
+                    src={src}
+                    className="max-w-full max-h-[70vh] w-auto h-auto object-contain rounded-lg shadow-md"
+                    alt={`Slide ${idx + 1}`}
+                    style={{
+                      display: 'block',
+                      margin: '0 auto',
+                      borderRadius: '0.5rem',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                    }}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                  />
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+        
+        {/* Navigation Arrows - Larger and more visible */}
+        <button 
+          onClick={(e) => {
+            e.stopPropagation();
+            setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+          }}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#c2410c] w-12 h-24 md:w-16 md:h-32 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105 z-10 rounded-r-lg"
+          aria-label="Previous slide"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button 
+          onClick={(e) => {
+            e.stopPropagation();
+            setCurrent((prev) => (prev + 1) % slides.length);
+          }}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#c2410c] w-12 h-24 md:w-16 md:h-32 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105 z-10 rounded-l-lg"
+          aria-label="Next slide"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
-      {/* Dots below carousel */}
-      <div className="flex gap-4 mt-6 justify-center">
+      
+      <div className="flex gap-2 mt-4 justify-center">
         {slides.map((_, idx) => (
           <button
-            key={idx}
-            className={`w-6 h-6 rounded-full border-4 transition-all duration-300 
-              ${current === idx 
-                ? '!bg-[#ff4e3c] !border-[#ff4e3c] ring-2 ring-[#ffb200] scale-125 shadow-lg' 
-                : '!bg-[#ff4e3c] !border-[#ff4e3c]'}
-            `}
-            style={{ backgroundColor: '#ff4e3c', }}
-            onClick={() => setCurrent(idx)}
+            key={`indicator-${idx}`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              current === idx 
+                ? 'bg-[#ff6b35] w-6' 
+                : 'bg-[#ffd5c2] w-3 hover:bg-[#ffb088]'
+            }`}
+            onClick={(e) => {
+              e.stopPropagation();
+              setCurrent(idx);
+            }}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}

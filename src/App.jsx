@@ -74,6 +74,8 @@ const CategoryPage = React.lazy(() => import('./pages/CategoryPage.jsx'));
 const SubcategoryPage = React.lazy(() => import('./pages/SubcategoryPage.jsx'));
 const SubcategoryListPage = React.lazy(() => import('./pages/SubcategoryListPage.jsx'));
 const TestPaper = React.lazy(() => import('./pages/TestPaper.jsx'));
+const BlogPage = React.lazy(() => import('./studymaterial/BlogPage.jsx'));
+const BlogsListPage = React.lazy(() => import('./studymaterial/BlogsListPage.jsx'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard.jsx'));
 import Admin from './pages/Admin.jsx';
 import Abhishek from './studymaterial/Abhishek.jsx';
@@ -423,7 +425,6 @@ import Class10Geography from './studymaterial/Class10Geography.jsx';
 
 
 import Class10ScienceElectricityPreviousYearQuestion from './studymaterial/Class10ScienceElectricityPreviousYearQuestion.jsx';
-import Map from './components/Map.jsx';
 
 
 const AdminDashboard = React.lazy(() => import('./pages/admindashboard.jsx'));
@@ -434,7 +435,6 @@ const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword.jsx'));
 const ResetPassword = React.lazy(() => import('./pages/ResetPassword.jsx'));
 import './App.css';
 import supabase from './supabaseClient';
-import { ToastContainer } from 'react-toastify';
 import Class10Economics from './studymaterial/Class10Economics.jsx';
 import Class10EconomicsDevelopment from './studymaterial/Class10EconomicsDevelopment.jsx';
 import Class10EconomicsMoneyAndCredit from './studymaterial/Class10EconomicsMoneyAndCredit.jsx';
@@ -559,6 +559,8 @@ function App() {
       <Routes>
           <Route Path="/Map" element={<Map />} />
           <Route path="/" element={<LandingPage />} />
+          <Route path="/blog" element={<BlogsListPage />} />
+          <Route path="/blog/:slug" element={<BlogPage />} />
 <Route path="/hall-of-fame" element={<HallOfFame />} />
           <Route path="/testresults" element={<TestResults />} />
           <Route path="/top-results" element={<TopResults />} />
@@ -594,7 +596,8 @@ function App() {
           <Route path="/studymaterial/class10/extraresources/Class10cbsesstpracticepaper2" element={<Class10cbsesstpracticepaper2 />} />
           <Route path="/studymaterial/class10/extraresources/Class10sstHalfyearly2025ImportantQuestions" element={<Class10sstHalfyearly2025ImportantQuestions />} />
 
-
+          <Route path="/studymaterial/blog/:title" element={<BlogPage />} />
+          <Route path="/studymaterial" element={<StudyMaterial />} />
 
           {/* Class 8 CBSE Social Science Chapters - Notes & Class Notes */}
           <Route path="/studymaterial/class8/Class8SocialScience/Class8cbseSocialScienceAgricultureChapterNotes" element={<Class8cbseSocialScienceAgricultureChapterNotes />} />
@@ -1182,7 +1185,6 @@ function App() {
 
 
         </Routes> 
-        <ToastContainer />
     </div>
   );
 }

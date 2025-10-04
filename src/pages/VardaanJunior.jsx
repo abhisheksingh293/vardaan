@@ -21,34 +21,7 @@ export default function VardaanJunior() {
   ];
 
   // Notice board state and fetch
-  const [noticeLines, setNoticeLines] = React.useState([]);
-  const [loadingNotices, setLoadingNotices] = React.useState(true);
-  const [errorNotices, setErrorNotices] = React.useState(null);
-  React.useEffect(() => {
-    let isMounted = true;
-    async function fetchNotices() {
-      setLoadingNotices(true);
-      setErrorNotices(null);
-      try {
-        const { data, error } = await supabase
-          .from('notices')
-          .select('lines')
-          .order('updated_at', { ascending: false })
-          .limit(1)
-          .single();
-        if (isMounted) {
-          if (error) setErrorNotices('Failed to load notices');
-          else setNoticeLines((data && data.lines) || []);
-        }
-      } catch (err) {
-        if (isMounted) setErrorNotices('Failed to load notices');
-      } finally {
-        if (isMounted) setLoadingNotices(false);
-      }
-    }
-    fetchNotices();
-    return () => { isMounted = false; };
-  }, []);
+
 
   // Global style to ensure full width and no scroll
   React.useEffect(() => {
@@ -145,7 +118,11 @@ export default function VardaanJunior() {
           <div style={{ width: '100%', maxWidth: 1200, margin: '50px 0px 0px 0px ', padding: '0px 16px 0 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
             <div className="vj-logo-row" style={{ display: 'flex', alignItems: 'center', gap: 18, marginBottom: 0 }}>
 
-              <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363108/juniorlogo_bixheq.png" alt="Vardaan Logo" style={{ height: 150, margin: '0 0px', verticalAlign: 'middle' }} />
+              <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363108/juniorlogo_bixheq.png"
+  alt="Vardaan Logo"
+  style={{ height: 150, margin: '0 0px', verticalAlign: 'middle' }}
+  fetchpriority="high"
+/>
               {/* <span style={{ fontFamily: 'Stencil', fontSize: 48, color: '#25d366', letterSpacing: 2, fontWeight: 900, marginTop: 20 }}>JUNIOR</span> */}
             </div>
             {/* Mobile-only top padding for logo */}

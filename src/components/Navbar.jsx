@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import supabase from '../supabaseClient';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motionPresets';
 import './Navbar.css';
 
@@ -68,7 +68,11 @@ export default function Navbar({ className = "" }) {
   }, []);
 
   useEffect(() => {
+    let lastCall = 0;
     function handleScroll() {
+      const now = Date.now();
+      if (now - lastCall < 100) return;
+      lastCall = now;
       setScrolled(window.scrollY > 0);
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;

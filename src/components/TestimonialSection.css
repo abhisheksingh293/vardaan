@@ -1,13 +1,18 @@
 .testimonial-section {
   background: linear-gradient(120deg, #fff7ed 70%, #ffecd2 100%);
-  /* padding: 60px 0; */
+  padding: 10px 10px;
   text-align: center;
+  min-height: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .testimonial-title {
   font-size: 3.2rem;
   margin-bottom: 32px;
-  color: #ff4e3c;
+  color: #c2410c;
   font-weight: 900;
   letter-spacing: 0.5px;
 }
@@ -23,7 +28,7 @@
   background: #fff7ed;
   border-radius: 22px;
   box-shadow: 0 4px 28px #fb923c22;
-  border-top: 4px solid #ff4e3c;
+  border-top: 4px solid #c2410c;
   padding: 36px 28px 28px 28px;
   max-width: 340px;
   display: flex;
@@ -67,7 +72,7 @@
 
 .testimonial-name {
   font-weight: 800;
-  color: #ff4e3c;
+  color: #c2410c;
   font-size: 1.08rem;
 }
 

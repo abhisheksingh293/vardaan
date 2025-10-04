@@ -157,7 +157,11 @@ export default function VardaanSenior() {
 
           <div style={{ width: '100%', maxWidth: 1200, margin: '50px 0px 0px 0px ', padding: '0px 16px 0 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
             <div className="vs-logo-row" style={{ display: 'flex', alignItems: 'center', gap: 18, marginBottom: 0 }}>
-              <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363113/seniorlogo_qqnkte.png" alt="Vardaan Senior Logo" style={{ height: 150, margin: '0 0px', verticalAlign: 'middle' }} />
+              <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363113/seniorlogo_qqnkte.png"
+  alt="Vardaan Senior Logo"
+  style={{ height: 150, margin: '0 0px', verticalAlign: 'middle' }}
+  fetchpriority="high"
+/>
             </div>
             {/* Mobile-only top padding for logo */}
             <style>{`

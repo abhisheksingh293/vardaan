@@ -14,7 +14,7 @@ const features = [
   'India’s Most Loved Platform',
 ];
 
-export default function SlidingFeatures({ speed = 40 }) {
+export default function SlidingFeatures() {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -22,16 +22,24 @@ export default function SlidingFeatures({ speed = 40 }) {
     if (!container) return;
     let animation;
     let scrollAmount = 0;
+    let halfScrollWidth = container.scrollWidth / 2;
     function animate() {
       scrollAmount += 1;
-      if (scrollAmount >= container.scrollWidth / 2) {
+      if (scrollAmount >= halfScrollWidth) {
         scrollAmount = 0;
       }
       container.scrollLeft = scrollAmount;
       animation = requestAnimationFrame(animate);
     }
     animation = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animation);
+    function handleResize() {
+      halfScrollWidth = container.scrollWidth / 2;
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      cancelAnimationFrame(animation);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   // Duplicate features for seamless loop

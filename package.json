@@ -51,7 +51,6 @@
     "html2pdf.js": "^0.10.3",
     "jspdf": "^3.0.1",
     "katex": "^0.16.22",
-    "leaflet": "^1.9.4",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.503.0",
     "ogl": "^1.0.11",

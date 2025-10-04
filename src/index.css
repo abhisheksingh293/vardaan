@@ -28,17 +28,17 @@ body {
   background: linear-gradient(135deg, #fff7ed 0%, #fff 60%, #ffedd5 100%) !important;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  min-width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
 }
 
 #root, .App {
-  width: 100vw;
-  min-width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -1,15 +1,21 @@
 .students-love-section {
   width: 100%;
   background: linear-gradient(90deg, #fff7ed 60%, #ffecd2 100%);
-  padding: 44px 0 36px 0;
+  padding: 30px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 .students-love-text {
   font-size: 2.6rem;
   font-weight: 900;
-  color: #ff4e3c;
+  color: #c2410c;
   letter-spacing: 1px;
   text-shadow: 0 2px 18px #fb923c33;
   display: flex;

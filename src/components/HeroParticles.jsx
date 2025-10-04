@@ -8,12 +8,16 @@ export default function HeroParticles({ color = '#fbbf24', count = 28 }) {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
-    const width = canvas.offsetWidth;
-    const height = canvas.offsetHeight;
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    ctx.scale(dpr, dpr);
-
+    let width = canvas.offsetWidth;
+    let height = canvas.offsetHeight;
+    function setCanvasSize() {
+      width = canvas.offsetWidth;
+      height = canvas.offsetHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    setCanvasSize();
     particles.current = Array.from({ length: count }).map(() => ({
       x: Math.random() * width,
       y: Math.random() * height,
@@ -22,7 +26,6 @@ export default function HeroParticles({ color = '#fbbf24', count = 28 }) {
       dy: -0.2 + Math.random() * 0.4,
       opacity: 0.35 + Math.random() * 0.5,
     }));
-
     let animationId;
     function animate() {
       ctx.clearRect(0, 0, width, height);
@@ -43,7 +46,14 @@ export default function HeroParticles({ color = '#fbbf24', count = 28 }) {
       animationId = requestAnimationFrame(animate);
     }
     animate();
-    return () => cancelAnimationFrame(animationId);
+    function handleResize() {
+      setCanvasSize();
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', handleResize);
+    };
   }, [color, count]);
 
   return (

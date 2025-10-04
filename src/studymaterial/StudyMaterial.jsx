@@ -1,34 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { blogPosts } from "./blogData";
 
 const StudyMaterial = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "How to Study Effectively",
-      thumbnail:
-        "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: 2,
-      title: "Top 10 Science Tips",
-      thumbnail:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
-    },
-    {
-      id: 3,
-      title: "Exam Stress? Try These Tricks!",
-      thumbnail:
-        "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80",
-    },
-    // Add more blog posts as needed
-  ];
-
-  // Handler for blog post click
-  const handleBlogClick = (id, title) => {
-    // For now, just log. You can add navigation or modal logic here.
-    console.log(`Blog clicked: ${title} (ID: ${id})`);
-  };
+  
 
   const navigate = useNavigate();
 
@@ -804,7 +779,7 @@ const StudyMaterial = () => {
               <div
                 key={blog.id}
                 className="insight-card"
-                onClick={() => handleBlogClick(blog.id, blog.title)}
+                onClick={() => navigate(`/blog/${blog.slug}`)}
               >
                 <img
                   src={blog.thumbnail}
@@ -813,18 +788,16 @@ const StudyMaterial = () => {
                 />
                 <div className="insight-content">
                   <h3 className="insight-title">{blog.title}</h3>
-                  <p className="insight-desc">
-                    A short description about "{blog.title}" goes here. You can
-                    update this with real summaries later.
-                  </p>
-                  <button className="insight-btn">Read More</button>
+                  <div className="insight-btn">
+                    Read More
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Other Important Buttons Section */}
+        {/* Other Important Buttons Section
         <section className="max-w-6xl mx-auto mb-12 p-8 bg-white rounded-xl shadow-lg border border-orange-200">
           <h2 className="text-3xl sm:text-4xl font-semibold text-orange-600 mb-6 pb-2 border-b-2 border-orange-300 text-center">
             Explore More from Vardaan Learning Institute
@@ -859,7 +832,7 @@ const StudyMaterial = () => {
               <span className="text-base font-semibold">Vardaan Senior</span>
             </button>
           </div>
-        </section>
+        </section> */}
 
         {/* Credit Section for Ankit Bhaiya */}
         <section className="max-w-6xl mx-auto mb-12 p-8 bg-white rounded-xl shadow-lg border border-orange-200 text-center">
