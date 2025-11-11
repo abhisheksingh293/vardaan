@@ -10,15 +10,15 @@ import './Navbar.css';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Senior', href: '/vardaan-senior' },
-  { name: 'Junior', href: '/vardaan-junior' },
+  // { name: 'Senior', href: '/vardaan-senior' },
+  // { name: 'Junior', href: '/vardaan-junior' },
   { name: 'Results', href: '/results' },
   {
     name: 'Study Material', href: '/studymaterial',
     dropdown: [
       { name: 'Study Material', href: '/studymaterial' },
 
-      { name: 'Notes', href: '/notes' },
+      // { name: 'Notes', href: '/notes' },
       { name: 'TEST Paper', href: '/testpaper' },
       { name: 'Books Solution', href: '/book-solutions' },
       { name: 'NCERT', href: '/ncertbooks' },

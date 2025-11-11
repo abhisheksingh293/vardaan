@@ -3,9 +3,9 @@ import "./TestimonialSection.css";
 
 const testimonials = [
   {
-    name: "Riya Verma",
-    role: "Class 10 Student",
-    quote: "Vardaan helped me improve my Maths score from 68% to 92%! The practice tests and quick doubt support made all the difference.",
+    name: "Akshita Lal",
+    role: "Class 10 ICSE",
+    quote: "I am glad that I’m studying at Vardaan Learning Institute. Here, you get every resource and support you need to excel in your studies. The teachers are very helpful and always encourage you like a friend, a brother, or a sister. /n They explain every concept clearly and make learning fun. The environment here is very positive, and there are regular tests to track our progress. This is truly the best institute I’ve ever been part of. Thank you, Vardaan! 💫",
     image: "https://api.dicebear.com/7.x/adventurer/svg?seed=student1&backgroundColor=ffecd2,fff7ed"
   },
   {

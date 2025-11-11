@@ -17,6 +17,155 @@ const processData = (data) => {
 
 export const initialTestData = [
 
+  {
+  "name": "Minor Test 19",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Swati (Class 8 CBSE)",
+      "score": "95.0%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Parul Neha Nayak (Class 10 CBSE)",
+      "score": "87.5%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Aradhya Ranjan (Class 8 CBSE)",
+      "score": "85.0%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Aadvik Kumar Jha (Class 7 ICSE)",
+      "score": "83.8%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Arnav Pathak (Class 10 CBSE)",
+      "score": "66.3%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Aditi (Class 7 ICSE)",
+      "score": "61.3%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Piyush (Class 12)",
+      "score": "60.0%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Rishav Kumar (Class 10 CBSE)",
+      "score": "57.5%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "57.5%",
+      "rank": 8
+    },
+    {
+      "id": 10,
+      "studentName": "Ananya Dubey (Class 10 CBSE)",
+      "score": "53.8%",
+      "rank": 10
+    },
+    {
+      "id": 11,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "46.3%",
+      "rank": 11
+    },
+    {
+      "id": 12,
+      "studentName": "Naitik (Class 10 CBSE)",
+      "score": "43.8%",
+      "rank": 12
+    },
+    {
+      "id": 13,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "43.8%",
+      "rank": 12
+    },
+    {
+      "id": 14,
+      "studentName": "Akshita Lal (Class 10 ICSE)",
+      "score": "40.0%",
+      "rank": 14
+    },
+    {
+      "id": 15,
+      "studentName": "Ananya (Class 11)",
+      "score": "36.8%",
+      "rank": 15
+    },
+    {
+      "id": 16,
+      "studentName": "Tanvi Bharti (Class 10 CBSE)",
+      "score": "33.8%",
+      "rank": 16
+    },
+    {
+      "id": 17,
+      "studentName": "Yoganshikha Mahato (Class 10 CBSE)",
+      "score": "32.5%",
+      "rank": 17
+    },
+    {
+      "id": 18,
+      "studentName": "Sripad Nayak (Class 9 CBSE)",
+      "score": "27.5%",
+      "rank": 18
+    },
+    {
+      "id": 19,
+      "studentName": "Sourya Sinha (Class 11)",
+      "score": "21.1%",
+      "rank": 19
+    },
+    {
+      "id": 20,
+      "studentName": "Vidyaprakash Kalia (Class 7 CBSE)",
+      "score": "15.0%",
+      "rank": 20
+    }
+  ]
+},
+
+    {
+        name: "Minor Test 18",
+        results: [
+          { id: 1, studentName: "Advik Kumar Jha (Class 7 ICSE)", score: "80.0%", rank: 1 },
+          {
+      "id": 2,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "75%",
+      "rank": 2
+    },
+          { id: 3, studentName: "Arpit Kumar Singh (Class 7 CBSE)", score: "72.5%", rank: 3 },
+          { id: 4, studentName: "Sripad Nayak (Class 9 CBSE)", score: "52.5%", rank: 4 },
+          { id: 5, studentName: "Arnav Pathak (Class 10 CBSE)", score: "48.3%", rank: 5 },
+          { id: 6, studentName: "Akshita Lal (Class 10 ICSE)", score: "47.5%", rank: 6 },
+          { id: 7, studentName: "Parul Neha Nayak (Class 10 CBSE)", score: "18.3%", rank: 7 },
+          { id: 8, studentName: "Ananya Dubey (Class 10 CBSE)", score: "16.7%", rank: 8 },
+          { id: 9, studentName: "Naitik (Class 10 CBSE)", score: "11.7%", rank: 9 },
+          { id: 10, studentName: "Arnav Mishra (Class 7 CBSE)", score: "10.0%", rank: 10 },
+          { id: 11, studentName: "Tanvi Bharti (Class 10 CBSE)", score: "8.3%", rank: 11 }
+        ]
+      },
+
+
 {
         name: "Minor Test 17",
         results: [
@@ -26,8 +175,8 @@ export const initialTestData = [
             { id: 4, studentName: "Aditi (Class 7 ICSE)", score: "72.5%", rank: 4 },
             { id: 5, studentName: "Parul Neha Nayak (Class 10 CBSE)", score: "67.5%", rank: 5 },
             { id: 6, studentName: "Arnav Pathak (Class 10 CBSE)", score: "66.3%", rank: 6 },
-            { id: 7, studentName: "Ananya Dubey (Class 10 CBSE)", score: "65.0%", rank: 7 },
-            { id: 8, studentName: "Ananya (Class 11)", score: "65.0%", rank: 7 },
+            { id: 7, studentName: "Ananya (Class 11)", score: "65.0%", rank: 7 },
+            { id: 8, studentName: "Ananya Dubey(Class 10 CBSE)", score: "65.0%", rank: 8 },
             { id: 9, studentName: "Yoganshika (Class 10 CBSE)", score: "61.3%", rank: 9 },
             { id: 10, studentName: "Mayank Mishra (Class 9 ICSE)", score: "57.5%", rank: 10 },
             { id: 11, studentName: "Naitik (Class 10 CBSE)", score: "56.3%", rank: 11 },

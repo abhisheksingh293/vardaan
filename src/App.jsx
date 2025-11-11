@@ -58,7 +58,8 @@ import Class9EconomicsFoodSecurityInIndiaClassNotes from './studymaterial/Class9
 import Class9EconomicsFoodSecurityInIndiaChapterNotes from './studymaterial/Class9EconomicsFoodSecurityInIndiaChapterNotes.jsx';
 import Class9EconomicsFoodSecurityInIndiaMindMaps from './studymaterial/Class9EconomicsFoodSecurityInIndiaMindMaps.jsx';
 import Class9EconomicsFoodSecurityInIndiaPracticeQuestions from './studymaterial/Class9EconomicsFoodSecurityInIndiaPracticeQuestions.jsx';
-
+import Class7icseCurrentAffairs from './studymaterial/Class7icseCurrentAffairs.jsx';
+import Class7icseCurrentAffairsjulyAugust2025 from './studymaterial/Class7icseCurrentAffairsjulyAugust2025.jsx';
 import TopResults from './components/TopResults';
 import ResultCheck from './pages/ResultCheck.jsx';
 import RegisterStudent from './pages/RegisterStudent.jsx';
@@ -123,6 +124,10 @@ import Class7SocialScience from './studymaterial/Class7SocialScience.jsx';
 import Class7English from './studymaterial/Class7English.jsx';
 import Class7EnglishGrammar from './studymaterial/Class7EnglishGrammar.jsx';
 import Class7CbseSst from './studymaterial/Class7CbseSst.jsx';
+
+
+
+
 import Class7CbseSstHumanEnvironmentSettlementTransportAndCommunicationClassNotes from './studymaterial/Class7CbseSstHumanEnvironmentSettlementTransportAndCommunicationClassNotes.jsx';
 import Class7CbseSstLifeOnTheEarthDetailedNotes from './studymaterial/Class7CbseSstLifeOnTheEarthDetailedNotes.jsx';
 import Class7CbseSstMajorReligionsClassNotes from "./studymaterial/Class7CbseSstMajorReligionsClassNotes.jsx";
@@ -688,6 +693,9 @@ function App() {
           <Route path="/studymaterial/class7icse/Class7icseScience" element={<Class7icseScience />} />
           <Route path="/studymaterial/class7icse/Class7icseMathematics" element={<Class7icseMathematics />} />
           <Route path="/studymaterial/class7icse/Class7icseGeography" element={<Class7icseGeography />} />
+          <Route path="/studymaterial/class7icse/Class7icseCurrentAffairs" element={<Class7icseCurrentAffairs />} />
+         
+         
           {/* CLASS7ICSEGEOGRAPHY CHAPTER ROUTES */}
           {/* Chapter 01 */}
           <Route path="/studymaterial/class7icse/geography/Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes" element={<Class7icseGeographyRepresentationofGeographicalFeaturesonTopographicalSheetsClassNotes />} />
@@ -804,8 +812,8 @@ function App() {
           <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanChapterNotes" element={<Class7icseGeographyTheOceanChapterNotes />} />
           <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanMindMaps" element={<Class7icseGeographyTheOceanMindMaps />} />
           <Route path="/studymaterial/class7icse/geography/Class7icseGeographyTheOceanPracticeQuestions" element={<Class7icseGeographyTheOceanPracticeQuestions />} />
-         
-         
+         <Route path='/studymaterial/class7icse/Class7icseCurrentAffairs' element={<Class7icseCurrentAffairs />} />
+         <Route path='/studymaterial/class7icse/Class7icseCurrentAffairs/Class7icseCurrentAffairsjulyAugust2025' element={<Class7icseCurrentAffairsjulyAugust2025 />} />
          
          
           <Route path="/studymaterial/class7icse/Class7icseEnglish" element={<Class7icseEnglish />} />

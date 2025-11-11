@@ -9,6 +9,7 @@ const Class7icse = () => {
   const handleEnglishClick = () => navigate('/studymaterial/class7icse/Class7icseEnglish');
   const handleEnglishGrammarClick = () => navigate('/studymaterial/class7icse/Class7icseEnglishGrammar');
   const handleCivicsHistoryClick = () => navigate('/studymaterial/class7icse/Class7icseCivicsHistory');
+  const handleCurrentAffairsClick = () => navigate('/studymaterial/class7icse/Class7icseCurrentAffairs');
 
   return (
     <div className="mt-17 min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 p-4 sm:p-6 font-inter text-gray-800">
@@ -73,6 +74,13 @@ const Class7icse = () => {
             <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1751363610/GrammarLanguage_w7qszs.png" alt="English Grammar Advanced Icon" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
             <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">English Grammar</h3>
           </button>
+
+          <button onClick={handleCurrentAffairsClick} className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg border border-orange-100 hover:shadow-xl hover:scale-105 transition-all duration-300 transform focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-75">
+            <img src="https://res.cloudinary.com/dxwszplz7/image/upload/v1759763329/current_affairs_q12cip.png" alt="Current Affairs" className="w-36 h-36 mb-4 rounded-lg shadow-md" />
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 text-center mb-2">Current Affairs</h3>
+          </button>
+
+
         </div>
       </section>
     </div>
