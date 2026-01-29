@@ -16,6 +16,587 @@ const processData = (data) => {
 };
 
 export const initialTestData = [
+  {
+  "name": "Minor Test 25",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Aditi Sujan (Class 7 ICSE)",
+      "score": "85.00%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Vidya Prakash Kalia (Class 7 CBSE)",
+      "score": "83.75%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Advik Kumar Jha (Class 7 ICSE)",
+      "score": "70.00%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Porshiya Bhowmik (Class 6 ICSE)",
+      "score": "67.50%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "57.50%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "42.50%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "28.75%",
+      "rank": 7
+    }
+  ]
+},
+  
+  {
+  "name": "Minor Test 24",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Aradhya Ranjan (Class 8 CBSE)",
+      "score": "81.25%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "81.25%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Aditi Sujan (Class 7 ICSE)",
+      "score": "76.25%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Swati Priya (Class 8 CBSE)",
+      "score": "71.25%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "45.00%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "31.25%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Pari (Class 9 CBSE)",
+      "score": "25.00%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Pihu (Class 9 CBSE)",
+      "score": "20.00%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Utkarsh Singh (Class 8 CBSE)",
+      "score": "11.25%",
+      "rank": 9
+    }
+  ]
+},
+
+
+
+
+  {
+  "name": "Minor Test 23", 
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Advik Kumar Jha",
+      "score": "97.50%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Vidya Prakash Kaliya",
+      "score": "82.50%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Aditi Sujan",
+      "score": "76.25%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Arnav Mishra",
+      "score": "63.75%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Arpit Kumar Singh",
+      "score": "61.25%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Aarush Kumar",
+      "score": "60.00%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Utkarsh Singh",
+      "score": "42.00%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Mayank",
+      "score": "26.25%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Shripad Nayak",
+      "score": "13.75%",
+      "rank": 9
+    }
+  ]
+},
+
+  {
+  "name": "Minor Test 22",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Mayank Mishra (Class 9 ICSE)",
+      "score": "92.00%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Advik Kumar Jha (Class 7 ICSE)",
+      "score": "88.00%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Swati Priya (Class 8 CBSE)",
+      "score": "87.50%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "86.00%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Porshiya Bhowmik (Class 6 ICSE)",
+      "score": "82.00%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "80.00%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Pihu (Class 9 CBSE)",
+      "score": "78.00%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Vidyaprakash Kalia (Class 7 CBSE)",
+      "score": "78.00%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Aditi Sujan (Class 7 ICSE)",
+      "score": "74.00%",
+      "rank": 9
+    },
+    {
+      "id": 10,
+      "studentName": "Aarush Kumar (Class 6 CBSE)",
+      "score": "74.00%",
+      "rank": 10
+    },
+    {
+      "id": 11,
+      "studentName": "Parul Neha Nayak (Class 10 CBSE)",
+      "score": "72.50%",
+      "rank": 11
+    },
+    {
+      "id": 12,
+      "studentName": "Aradhya Ranjan (Class 8 CBSE)",
+      "score": "72.50%",
+      "rank": 12
+    },
+    {
+      "id": 13,
+      "studentName": "Pari (Class 9 CBSE)",
+      "score": "72.00%",
+      "rank": 13
+    },
+    {
+      "id": 14,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "64.00%",
+      "rank": 14
+    },
+    {
+      "id": 15,
+      "studentName": "Arnav Pathak (Class 10 CBSE)",
+      "score": "62.50%",
+      "rank": 15
+    },
+    {
+      "id": 16,
+      "studentName": "Vimal (Class 10 CBSE)",
+      "score": "62.50%",
+      "rank": 16
+    },
+    {
+      "id": 17,
+      "studentName": "Ananya Dubey (Class 10 CBSE)",
+      "score": "60.00%",
+      "rank": 17
+    },
+    {
+      "id": 18,
+      "studentName": "Rishav (Class 10 CBSE)",
+      "score": "42.50%",
+      "rank": 18
+    },
+    {
+      "id": 19,
+      "studentName": "Tanvi Bharti (Class 10 CBSE)",
+      "score": "40.00%",
+      "rank": 19
+    },
+    {
+      "id": 20,
+      "studentName": "Amit Kumar (Class 10 CBSE)",
+      "score": "30.00%",
+      "rank": 20
+    },
+    {
+      "id": 21,
+      "studentName": "Utkarsh (Class 8 CBSE)",
+      "score": "26.25%",
+      "rank": 21
+    },
+    {
+      "id": 22,
+      "studentName": "Naitik (Class 10 CBSE)",
+      "score": "22.50%",
+      "rank": 22
+    },
+    {
+      "id": 23,
+      "studentName": "Krishna Kant Kumar (Class 10 ICSE)",
+      "score": "10.00%",
+      "rank": 23
+    }
+  ]
+},
+
+    {
+  "name": "Minor Test 21",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Swati Priya (Class 8 CBSE) 🏆",
+      "score": "100.00%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Aditi Sujan (Class 7 ICSE)",
+      "score": "88.75%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Advik Kumar Jha (Class 7 ICSE)",
+      "score": "82.50%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Aarush (Class 6 CBSE)",
+      "score": "71.25%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Aradhya Ranjan (Class 8 CBSE)",
+      "score": "67.50%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Porshiya Bhowmik (Class 6 ICSE)",
+      "score": "67.50%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Vidyaprakash Kalia (Class 7 CBSE)",
+      "score": "63.75%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Sripad Nayak (Class 9 CBSE)",
+      "score": "50.00%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "50.00%",
+      "rank": 9
+    },
+    {
+      "id": 10,
+      "studentName": "Arnav Pathak (Class 10 CBSE)",
+      "score": "42.50%",
+      "rank": 10
+    },
+    {
+      "id": 11,
+      "studentName": "Akshita Lal (Class 10 ICSE)",
+      "score": "42.50%",
+      "rank": 11
+    },
+    {
+      "id": 12,
+      "studentName": "Utkarsh (Class 8 CBSE)",
+      "score": "37.50%",
+      "rank": 12
+    },
+    {
+      "id": 13,
+      "studentName": "Parul Neha Nayak (Class 10 CBSE)",
+      "score": "21.25%",
+      "rank": 13
+    },
+    {
+      "id": 14,
+      "studentName": "Rishav (Class 10 CBSE)",
+      "score": "20.00%",
+      "rank": 14
+    },
+    {
+      "id": 15,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "20.00%",
+      "rank": 15
+    },
+    {
+      "id": 16,
+      "studentName": "Naitik (Class 10 CBSE)",
+      "score": "17.50%",
+      "rank": 16
+    },
+    {
+      "id": 17,
+      "studentName": "Yoganshika (Class 10 CBSE)",
+      "score": "17.50%",
+      "rank": 17
+    },
+    {
+      "id": 18,
+      "studentName": "Tanvi Bharti (Class 10 CBSE)",
+      "score": "15.00%",
+      "rank": 18
+    },
+    {
+      "id": 19,
+      "studentName": "Amit Kumar (Class 10 CBSE)",
+      "score": "7.50%",
+      "rank": 19
+    }
+  ]
+},
+
+
+
+ {
+  "name": "Minor Test 20",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Aditi (Class 7 ICSE)",
+      "score": "77.5%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Pari (Class 9 CBSE)",
+      "score": "76.7%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Pihu (Class 9 CBSE)",
+      "score": "75.0%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Aradhya Ranjan (Class 8 CBSE)",
+      "score": "75.0%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Parul Neha Nayak (Class 10 CBSE)",
+      "score": "72.5%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "vimal (Class 10 CBSE)",
+      "score": "68.8%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Vidyaprakash Kalia (Class 7 CBSE)",
+      "score": "67.5%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Arnav Pathak (Class 10 CBSE)",
+      "score": "66.3%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Aadvik Kumar Jha (Class 7 ICSE)",
+      "score": "65.0%",
+      "rank": 9
+    },
+    {
+      "id": 10,
+      "studentName": "Ananya Dubey (Class 10 CBSE)",
+      "score": "51.3%",
+      "rank": 10
+    },
+    {
+      "id": 11,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "51.3%",
+      "rank": 11
+    },
+    {
+      "id": 12,
+      "studentName": "Akshita Lal (Class 10 ICSE)",
+      "score": "50.0%",
+      "rank": 12
+    },
+    {
+      "id": 13,
+      "studentName": "Tanvi Bharti (Class 10 CBSE)",
+      "score": "47.5%",
+      "rank": 13
+    },
+    {
+      "id": 14,
+      "studentName": "Swati (Class 8 CBSE)",
+      "score": "47.5%",
+      "rank": 14
+    },
+    {
+      "id": 15,
+      "studentName": "Rishav Kumar (Class 10 CBSE)",
+      "score": "42.5%",
+      "rank": 15
+    },
+    {
+      "id": 16,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "41.3%",
+      "rank": 16
+    },
+    {
+      "id": 17,
+      "studentName": "Yoganshikha Mahato (Class 10 CBSE)",
+      "score": "38.8%",
+      "rank": 17
+    },
+    {
+      "id": 18,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "37.5%",
+      "rank": 18
+    },
+    {
+      "id": 19,
+      "studentName": "Naitik (Class 10 CBSE)",
+      "score": "36.3%",
+      "rank": 19
+    },
+    {
+      "id": 20,
+      "studentName": "Porshiya Bhowmik (Class 6 ICSE)",
+      "score": "33.8%",
+      "rank": 20
+    },
+    {
+      "id": 21,
+      "studentName": "Mayank Mishra (Class 9 ICSE)",
+      "score": "26.3%",
+      "rank": 21
+    },
+    {
+      "id": 22,
+      "studentName": "Sripad Nayak (Class 9 CBSE)",
+      "score": "2.5%",
+      "rank": 22
+    },
+    {
+      "id": 23,
+      "studentName": "Utkarsh Singh (Class 8 CBSE)",
+      "score": "2.5%",
+      "rank": 23
+    }
+  ]
+},
+    
 
   {
   "name": "Minor Test 19",
