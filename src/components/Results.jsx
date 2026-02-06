@@ -16,6 +16,86 @@ const processData = (data) => {
 };
 
 export const initialTestData = [
+
+
+ {
+  "name": "Minor Test 26",
+  "results": [
+    {
+      "id": 1,
+      "studentName": "Rudransh Sharma (Class 6 ICSE)",
+      "score": "76.25%",
+      "rank": 1
+    },
+    {
+      "id": 2,
+      "studentName": "Vidya Prakash (Class 7 CBSE)",
+      "score": "67.50%",
+      "rank": 2
+    },
+    {
+      "id": 3,
+      "studentName": "Arpit Kumar Singh (Class 7 CBSE)",
+      "score": "52.50%",
+      "rank": 3
+    },
+    {
+      "id": 4,
+      "studentName": "Aarush (Class 6 CBSE)",
+      "score": "52.50%",
+      "rank": 4
+    },
+    {
+      "id": 5,
+      "studentName": "Aditi Panday (NIOS Class 10)",
+      "score": "40.00%",
+      "rank": 5
+    },
+    {
+      "id": 6,
+      "studentName": "Utkarsh Singh (Class 8 CBSE)",
+      "score": "40.00%",
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "studentName": "Pari (Class 9 CBSE)",
+      "score": "40.00%",
+      "rank": 7
+    },
+    {
+      "id": 8,
+      "studentName": "Mayank Mishra (Class 9 ICSE)",
+      "score": "33.75%",
+      "rank": 8
+    },
+    {
+      "id": 9,
+      "studentName": "Arnav Mishra (Class 7 CBSE)",
+      "score": "21.25%",
+      "rank": 9
+    },
+    {
+      "id": 10,
+      "studentName": "Pihu (Class 9 CBSE)",
+      "score": "21.25%",
+      "rank": 10
+    },
+    {
+      "id": 11,
+      "studentName": "Akshita Lal (Class 10 ICSE)",
+      "score": "11.25%",
+      "rank": 11
+    },
+    {
+      "id": 12,
+      "studentName": "Sripad Nayak (Class 9 CBSE)",
+      "score": "5.00%",
+      "rank": 12
+    }
+  ]
+},
+
   {
   "name": "Minor Test 25",
   "results": [
